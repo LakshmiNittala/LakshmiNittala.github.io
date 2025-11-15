@@ -7,42 +7,58 @@
     <title>Dr. [Your Name] - Operations & Business Analytics</title>
     
     <style>
+        /* --- NEW COLOR PALETTE --- */
+        :root {
+            --primary-dark: #2c3e50;  /* Dark Slate Blue */
+            --primary-light: #34495e; /* Lighter Slate */
+            --link-blue: #0056b3;       /* Professional Blue for links */
+            --bg-light: #f8f9fa;      /* Very Light Grey (Page Background) */
+            --bg-white: #ffffff;      /* White (Content Box) */
+            --text-dark: #333;
+            --text-light: #f4f4f4;
+            --border-color: #eee;
+        }
+
         /* --- Basic Styling --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--bg-light); /* Changed to light grey */
+            color: var(--text-dark);
             margin: 0;
             padding: 0;
         }
         .container {
             max-width: 960px;
             margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 0; /* Remove padding to let header be full-width */
+            background-color: var(--bg-white);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
             border-radius: 8px;
+            overflow: hidden; /* Keeps rounded corners */
         }
 
-        /* --- Header & Navigation --- */
+        /* --- Header & Navigation (NOW COLORFUL) --- */
         header {
             text-align: center;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
+            padding: 30px 20px;
             margin-bottom: 30px;
+            background-color: var(--primary-dark); /* NEW: Dark blue background */
+            color: var(--text-light); /* NEW: Light text */
         }
         header h1 {
             margin: 0;
-            color: #2c3e50;
+            color: var(--bg-white); /* NEW: Bright white for name */
+            font-size: 2.5rem;
         }
         header p {
             margin: 5px 0;
             font-size: 1.2rem;
-            color: #555;
+            color: var(--text-light); /* NEW: Light text */
+            opacity: 0.9;
         }
         nav {
-            margin-top: 20px;
+            margin-top: 25px;
         }
         nav ul {
             list-style: none;
@@ -50,43 +66,60 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
         nav ul li a {
             text-decoration: none;
-            color: #0056b3; /* A professional blue */
-            font-weight: bold;
+            color: var(--bg-white); /* NEW: White nav links */
+            font-weight: 500;
             font-size: 1.1rem;
-            padding: 5px 10px;
+            padding: 8px 12px;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
         nav ul li a:hover, nav ul li a.active {
-            background-color: #f0f0f0;
-            text-decoration: underline;
+            background-color: var(--primary-light); /* NEW: Lighter blue hover */
+            text-decoration: none;
+        }
+        nav ul li a.active {
+            font-weight: 700;
         }
 
         /* --- Page Content Sections --- */
+        main {
+            /* Add padding back to the content, but not the header */
+            padding: 0 30px 30px 30px;
+        }
         section {
             margin-bottom: 30px;
         }
         h2 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: var(--primary-dark); /* NEW: Matching dark blue for headings */
         }
         .about-section {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 25px;
         }
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #eee;
+            border: 4px solid var(--primary-dark); /* NEW: Matching blue border */
+            padding: 3px; /* Creates a small white gap */
+        }
+        
+        /* --- Link Styling --- */
+        a {
+            color: var(--link-blue); /* Standard blue for all links in content */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         ul.research-list li {
             margin-bottom: 10px;
@@ -103,8 +136,9 @@
         footer {
             text-align: center;
             margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+            padding: 20px;
+            background-color: var(--bg-light); /* NEW: Light grey footer */
+            border-top: 1px solid var(--border-color);
             font-size: 0.9rem;
             color: #777;
         }
