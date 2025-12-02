@@ -1,222 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshminarayana Nittala | Operations & Business Analytics</title>
     
-    <title>Dr. [Your Name] - Operations & Business Analytics</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* --- NEW COLOR PALETTE --- */
-        :root {
-            --primary-dark: #2c3e50;  /* Dark Slate Blue */
-            --primary-light: #34495e; /* Lighter Slate */
-            --link-blue: #0056b3;       /* Professional Blue for links */
-            --bg-light: #f8f9fa;      /* Very Light Grey (Page Background) */
-            --bg-white: #ffffff;      /* White (Content Box) */
-            --text-dark: #333;
-            --text-light: #f4f4f4;
-            --border-color: #eee;
-        }
-
-        /* --- Basic Styling --- */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            background-color: var(--bg-light); /* Changed to light grey */
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
         }
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 0; /* Remove padding to let header be full-width */
-            background-color: var(--bg-white);
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden; /* Keeps rounded corners */
-        }
-
-        /* --- Header & Navigation (NOW COLORFUL) --- */
-        header {
-            text-align: center;
-            padding: 30px 20px;
-            margin-bottom: 30px;
-            background-color: var(--primary-dark); /* NEW: Dark blue background */
-            color: var(--text-light); /* NEW: Light text */
-        }
-        header h1 {
-            margin: 0;
-            color: var(--bg-white); /* NEW: Bright white for name */
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 5px 0;
-            font-size: 1.2rem;
-            color: var(--text-light); /* NEW: Light text */
-            opacity: 0.9;
-        }
-        nav {
-            margin-top: 25px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: var(--bg-white); /* NEW: White nav links */
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav ul li a:hover, nav ul li a.active {
-            background-color: var(--primary-light); /* NEW: Lighter blue hover */
-            text-decoration: none;
-        }
-        nav ul li a.active {
-            font-weight: 700;
-        }
-
-        /* --- Page Content Sections --- */
-        main {
-            /* Add padding back to the content, but not the header */
-            padding: 0 30px 30px 30px;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        h2 {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            color: var(--primary-dark); /* NEW: Matching dark blue for headings */
-        }
-        .about-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 25px;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary-dark); /* NEW: Matching blue border */
-            padding: 3px; /* Creates a small white gap */
-        }
-        
-        /* --- Link Styling --- */
-        a {
-            color: var(--link-blue); /* Standard blue for all links in content */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul.research-list li {
-            margin-bottom: 10px;
-        }
-        .quick-links ul {
-            list-style: none;
-            padding: 0;
-        }
-        .quick-links li {
-            margin-bottom: 8px;
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            background-color: var(--bg-light); /* NEW: Light grey footer */
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: #777;
+        /* Gradient Background for Hero */
+        .hero-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased">
 
-    <div class="container">
-
-        <header>
-            <h1>Dr. [Your Name]</h1>
-            
-            <p>Associate Professor of Operations Management & Business Analytics</p>
-            <p>[Your University Name]</p>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
-                    
-                    <li><a href="[Your_CV.pdf]" target="_blank">CV</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-slate-800 tracking-tight">L. Nittala<span class="text-blue-600">.</span></a>
+                </div>
                 
-                <div class="about-section">
-                    <img src="[your-photo.jpg]" alt="Profile Picture" class="profile-pic">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About</a>
+                    <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Experience</a>
+                    <a href="#projects" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Projects</a>
+                    <a href="#coursework" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Coursework</a>
+                    <a href="#contact" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Experience</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Projects</a>
+                <a href="#coursework" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Coursework</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-semibold">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white pt-32 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:w-2/3">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-300 uppercase bg-blue-900/30 rounded-full border border-blue-700/50">
+                    Academic Portfolio
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                    Lakshminarayana Nittala
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light">
+                    Associate Professor in <span class="text-white font-medium">Operations & Business Analytics</span> at the University of Dayton. Bridging the gap between engineering precision and data-driven business insights.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="px-8 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-900/20 text-center">
+                        Get in Touch
+                    </a>
+                    <a href="#experience" class="px-8 py-3 text-base font-semibold text-slate-200 bg-slate-800 rounded-lg hover:bg-slate-700 transition border border-slate-700 text-center">
+                        View Experience
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     
+                    <!-- Bio -->
                     <div>
-                        <p>
-                            Welcome! I am an Associate Professor of Operations Management and Business Analytics at the [School of Business] at [Your University Name].
-                        </p>
-                        <p>
-                            My work focuses on the intersection of operations management and data science. I develop and apply machine learning models and analytical methods to improve supply chain efficiency, manage operational risk, and optimize business processes.
-                        </p>
-                        <p>
-                            I teach courses at both the graduate and undergraduate levels, including Operations Management, Supply Chain Analytics, and Applied Machine Learning for Business.
-                        </p>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-6">About Me</h2>
+                        <div class="prose prose-slate text-slate-600 text-lg leading-relaxed">
+                            <p class="mb-4">
+                                I am an Associate Professor in Operations and Business Analytics with a rich background in engineering and technology development. Currently based in Dayton, Ohio, I specialize in applying analytical frameworks to solve complex operational challenges.
+                            </p>
+                            <p class="mb-4">
+                                My journey began in Materials Engineering, working with industry leaders like Novellus Systems, before transitioning into academia to focus on Innovation, Technology, and Operations.
+                            </p>
+                            <p>
+                                I am passionate about leveraging Machine Learning and Business Analytics to drive decision-making processes and educate the next generation of data-driven leaders.
+                            </p>
+                        </div>
+                        
+                        <!-- Education Summary -->
+                        <div class="mt-8 pt-8 border-t border-slate-100">
+                            <h3 class="text-xl font-bold text-slate-900 mb-4">Education</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-graduation-cap mt-1 text-blue-600 mr-3"></i>
+                                    <div>
+                                        <div class="font-semibold text-slate-900">PhD, Innovation, Technology & Operations</div>
+                                        <div class="text-sm text-slate-500">UCSD Rady School of Management, 2017</div>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-graduation-cap mt-1 text-blue-600 mr-3"></i>
+                                    <div>
+                                        <div class="font-semibold text-slate-900">PhD, Materials Science & Engineering</div>
+                                        <div class="text-sm text-slate-500">University of Illinois Urbana-Champaign, 2006</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Skills Cards -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6">Core Competencies</h3>
+                        
+                        <!-- Skill Category 1: Analytics (Placeholder for future skills) -->
+                        <div class="mb-6">
+                            <h4 class="text-sm uppercase tracking-wide text-slate-500 font-semibold mb-3">Business Analytics & ML</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Machine Learning</span>
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Data Analysis</span>
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Operations Management</span>
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Statistical Modeling</span>
+                            </div>
+                        </div>
+
+                        <!-- Skill Category 2: Engineering/Technical (From PDF) -->
+                        <div class="mb-6">
+                            <h4 class="text-sm uppercase tracking-wide text-slate-500 font-semibold mb-3">Technical & Research</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Design of Experiments</span>
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Process Development</span>
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">CVD / Thin Films</span>
+                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Innovation Strategy</span>
+                            </div>
+                        </div>
+
+                         <!-- Languages -->
+                         <div>
+                            <h4 class="text-sm uppercase tracking-wide text-slate-500 font-semibold mb-3">Languages</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm bg-slate-200 rounded-full text-slate-700">English</span>
+                                <span class="px-3 py-1 text-sm bg-slate-200 rounded-full text-slate-700">Hindi</span>
+                                <span class="px-3 py-1 text-sm bg-slate-200 rounded-full text-slate-700">Telugu</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="research-interests">
-                <h2>Research Interests</h2>
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
+                    <p class="mt-4 text-slate-600">A timeline of my academic and industrial career.</p>
+                </div>
+
+                <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
+                    
+                    <!-- Role 1 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-blue-600"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Associate Professor in Operations and Business Analytics</h3>
+                            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug 2024 - Present</span>
+                        </div>
+                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton</div>
+                        <div class="text-sm text-slate-500 mb-4">Dayton, Ohio, United States</div>
+                        <p class="text-slate-600">Teaching advanced analytics courses, conducting research in operations management, and mentoring students in business applications of machine learning.</p>
+                    </div>
+
+                    <!-- Role 2 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Assistant Professor in Operations and Supply Management</h3>
+                            <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug 2017 - Aug 2024</span>
+                        </div>
+                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton</div>
+                        <div class="text-sm text-slate-500 mb-4">Dayton, Ohio Area</div>
+                        <p class="text-slate-600">Developed curriculum for supply chain and operations courses. Published research on technology adoption and operational efficiency.</p>
+                    </div>
+
+                    <!-- Role 3 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Technologist / Senior Process Engineer</h3>
+                            <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">May 2006 - June 2011</span>
+                        </div>
+                        <div class="text-lg font-medium text-slate-700 mb-1">Novellus Systems (San Jose, CA)</div>
+                        <p class="text-slate-600">Led new product development initiatives. Utilized Design of Experiments (DOE) and statistical process control to optimize thin-film deposition processes for semiconductor manufacturing.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Placeholder for ML/Analytics) -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900">Projects</h2>
+                        <p class="mt-4 text-slate-600">Key projects in Business Analytics and Machine Learning.</p>
+                    </div>
+                    <!-- Link to detailed page (future) -->
+                    <a href="projects.html" class="hidden sm:inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition">
+                        View All Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project Card 1 (Example) -->
+                    <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
+                        <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
+                            <i class="fa-solid fa-chart-line text-4xl"></i> <!-- Placeholder Icon -->
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Machine Learning</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Predictive Maintenance Model</h3>
+                            <p class="text-slate-600 mb-4 line-clamp-3">
+                                Developed a Python-based predictive model using Random Forest to anticipate equipment failure in manufacturing settings, reducing downtime by 15%.
+                            </p>
+                            <a href="#" class="text-sm font-medium text-slate-900 hover:text-blue-600 transition">Read Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 (Example) -->
+                    <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
+                        <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
+                            <i class="fa-solid fa-network-wired text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Supply Chain Analytics</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Inventory Optimization</h3>
+                            <p class="text-slate-600 mb-4 line-clamp-3">
+                                Utilized linear programming and R to optimize inventory levels for a retail client, balancing holding costs against stockout risks.
+                            </p>
+                            <a href="#" class="text-sm font-medium text-slate-900 hover:text-blue-600 transition">Read Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 (Example) -->
+                    <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
+                        <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
+                            <i class="fa-solid fa-database text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Data Visualization</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Market Trend Dashboard</h3>
+                            <p class="text-slate-600 mb-4 line-clamp-3">
+                                Created an interactive Tableau dashboard to visualize longitudinal market trends, aiding executive decision-making.
+                            </p>
+                            <a href="#" class="text-sm font-medium text-slate-900 hover:text-blue-600 transition">Read Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
                 
-                <ul class="research-list">
-                    <li>Supply Chain Analytics & Resilience</li>
-                    <li>Predictive Maintenance & Quality Control</li>
-                    <li>Applied Machine Learning in Operations</li>
-                    <li>Business Process Optimization</li>
-                    <li>Stochastic Modeling</li>
-                </ul>
-            </section>
+                <div class="mt-8 text-center sm:hidden">
+                     <a href="projects.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition">
+                        View All Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-            <section id="quick-links" class="quick-links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="[your-google-scholar-url]" target="_blank">Google Scholar Profile</a></li>
-                    <li><a href="[your-linkedin-url]" target="_blank">LinkedIn</a></li>
-                    <li><a href="[your-github-url]" target="_blank">GitHub</a></li>
-                    <li><a href="[your-university-profile-url]" target="_blank">University Faculty Page</a></li>
-                </ul>
-            </section>
+        <!-- Coursework Section -->
+        <section id="coursework" class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold">Featured Coursework</h2>
+                    <p class="mt-4 text-slate-400">Courses I teach or have completed relevant to Analytics.</p>
+                </div>
 
-        </main>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Course 1 -->
+                    <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
+                        <div class="text-blue-400 text-sm font-semibold mb-2">DSC 450</div>
+                        <h3 class="text-lg font-bold mb-2">Business Analytics</h3>
+                        <p class="text-slate-400 text-sm">Descriptive, predictive, and prescriptive analytics using modern tools.</p>
+                    </div>
+                    <!-- Course 2 -->
+                    <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
+                        <div class="text-blue-400 text-sm font-semibold mb-2">OPS 300</div>
+                        <h3 class="text-lg font-bold mb-2">Machine Learning Ops</h3>
+                        <p class="text-slate-400 text-sm">Implementation of ML models in production environments.</p>
+                    </div>
+                    <!-- Course 3 -->
+                    <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
+                        <div class="text-blue-400 text-sm font-semibold mb-2">DSC 510</div>
+                        <h3 class="text-lg font-bold mb-2">Data Mining</h3>
+                        <p class="text-slate-400 text-sm">Extracting patterns from large datasets using statistical methods.</p>
+                    </div>
+                     <!-- Course 4 -->
+                     <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
+                        <div class="text-blue-400 text-sm font-semibold mb-2">MBA 620</div>
+                        <h3 class="text-lg font-bold mb-2">Supply Chain Mgmt</h3>
+                        <p class="text-slate-400 text-sm">Strategic optimization of logistics and supply networks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2025 [Your Name] | [Your University Name]</p>
-        </footer>
+        <!-- CTA / Contact -->
+        <section id="contact" class="py-24 bg-blue-600">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Interested in collaboration?</h2>
+                <p class="text-blue-100 text-xl mb-10">
+                    I am always open to discussing new research opportunities, industry consulting, or academic collaborations.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="mailto:nittala@gmail.com" class="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg">
+                        <i class="fa-regular fa-envelope mr-2"></i> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/lakshminarayana-nittala-273ab71" target="_blank" class="inline-flex items-center justify-center px-8 py-3 bg-blue-700 text-white font-bold rounded-lg border border-blue-500 hover:bg-blue-800 transition">
+                        <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-lg font-bold text-slate-200">L. Nittala</span>
+                <span class="ml-4 text-sm">&copy; 2025 All rights reserved.</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="mailto:nittala@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
 </body>
 </html>
