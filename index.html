@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakshminarayana Nittala | Operations & Business Analytics</title>
+    <title>Lakshminarayana Nittala, Ph.D. | Operations & Business Analytics</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -20,7 +20,14 @@
         }
         /* Gradient Background for Hero */
         .hero-bg {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .citation-box {
+            transition: all 0.3s ease;
+        }
+        .citation-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
     </style>
 </head>
@@ -31,15 +38,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-xl font-bold text-slate-800 tracking-tight">L. Nittala<span class="text-blue-600">.</span></a>
+                    <a href="#" class="text-xl font-bold text-slate-800 tracking-tight">L. Nittala, Ph.D.<span class="text-blue-600">.</span></a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden md:flex items-center space-x-6">
                     <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About</a>
                     <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Experience</a>
+                    <a href="#publications" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Publications</a>
+                    <a href="#patents" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Patents</a>
                     <a href="#projects" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Projects</a>
-                    <a href="#coursework" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Coursework</a>
                     <a href="#contact" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">Contact</a>
                 </div>
 
@@ -57,8 +65,9 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">About</a>
                 <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Experience</a>
+                <a href="#publications" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Publications</a>
+                <a href="#patents" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Patents</a>
                 <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Projects</a>
-                <a href="#coursework" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Coursework</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-semibold">Contact Me</a>
             </div>
         </div>
@@ -67,23 +76,33 @@
     <!-- Hero Section -->
     <header class="hero-bg text-white pt-32 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:w-2/3">
-                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-300 uppercase bg-blue-900/30 rounded-full border border-blue-700/50">
-                    Academic Portfolio
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-2/3 text-center lg:text-left">
+                    <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-300 uppercase bg-blue-900/30 rounded-full border border-blue-700/50">
+                        Academic Portfolio
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                        Lakshminarayana Nittala, Ph.D.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light">
+                        Associate Professor in <span class="text-white font-medium">Operations & Business Analytics</span> at the University of Dayton. Specializing in Innovation, Technology, and Operations.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="px-8 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-900/20 text-center">
+                            Get in Touch
+                        </a>
+                        <a href="#publications" class="px-8 py-3 text-base font-semibold text-slate-200 bg-slate-800 rounded-lg hover:bg-slate-700 transition border border-slate-700 text-center">
+                            View Research
+                        </a>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                    Lakshminarayana Nittala
-                </h1>
-                <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light">
-                    Associate Professor in <span class="text-white font-medium">Operations & Business Analytics</span> at the University of Dayton. Bridging the gap between engineering precision and data-driven business insights.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="px-8 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-900/20 text-center">
-                        Get in Touch
-                    </a>
-                    <a href="#experience" class="px-8 py-3 text-base font-semibold text-slate-200 bg-slate-800 rounded-lg hover:bg-slate-700 transition border border-slate-700 text-center">
-                        View Experience
-                    </a>
+                
+                <!-- Profile Picture -->
+                <div class="lg:w-1/3 flex justify-center">
+                    <div class="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
+                        <div class="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <img src="Profile_Lakshmi.jpg" alt="Lakshminarayana Nittala" class="relative w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl">
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,84 +115,81 @@
     <!-- Main Content Wrapper -->
     <main>
 
-        <!-- About & Skills Section -->
+        <!-- About & Education Section -->
         <section id="about" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     
-                    <!-- Bio -->
+                    <!-- Bio & Research Interests -->
                     <div>
                         <h2 class="text-3xl font-bold text-slate-900 mb-6">About Me</h2>
-                        <div class="prose prose-slate text-slate-600 text-lg leading-relaxed">
+                        <div class="prose prose-slate text-slate-600 text-lg leading-relaxed mb-8">
                             <p class="mb-4">
-                                I am an Associate Professor in Operations and Business Analytics with a rich background in engineering and technology development. Currently based in Dayton, Ohio, I specialize in applying analytical frameworks to solve complex operational challenges.
-                            </p>
-                            <p class="mb-4">
-                                My journey began in Materials Engineering, working with industry leaders like Novellus Systems, before transitioning into academia to focus on Innovation, Technology, and Operations.
+                                I am an Associate Professor in the Department of MIS, Operations & Supply Chain Management, and Business Analytics at the University of Dayton. My background uniquely bridges engineering precision with business strategy.
                             </p>
                             <p>
-                                I am passionate about leveraging Machine Learning and Business Analytics to drive decision-making processes and educate the next generation of data-driven leaders.
+                                I hold two Ph.D. degrees—one in Management (Innovation, Technology & Operations) and another in Materials Science & Engineering. This dual expertise allows me to approach complex operational problems with deep technical and analytical rigor.
                             </p>
                         </div>
-                        
-                        <!-- Education Summary -->
-                        <div class="mt-8 pt-8 border-t border-slate-100">
-                            <h3 class="text-xl font-bold text-slate-900 mb-4">Education</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-graduation-cap mt-1 text-blue-600 mr-3"></i>
-                                    <div>
-                                        <div class="font-semibold text-slate-900">PhD, Innovation, Technology & Operations</div>
-                                        <div class="text-sm text-slate-500">UCSD Rady School of Management, 2017</div>
-                                    </div>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-graduation-cap mt-1 text-blue-600 mr-3"></i>
-                                    <div>
-                                        <div class="font-semibold text-slate-900">PhD, Materials Science & Engineering</div>
-                                        <div class="text-sm text-slate-500">University of Illinois Urbana-Champaign, 2006</div>
-                                    </div>
-                                </li>
-                            </ul>
+
+                        <!-- Research Focus -->
+                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-8">
+                            <h3 class="text-lg font-bold text-blue-900 mb-4">Current Research Interests</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="text-sm uppercase tracking-wide text-blue-500 font-bold mb-2">Themes</h4>
+                                    <ul class="text-slate-700 text-sm space-y-1">
+                                        <li>• Innovation & Product Development</li>
+                                        <li>• Supply Chain Management</li>
+                                        <li>• Healthcare Operations</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm uppercase tracking-wide text-blue-500 font-bold mb-2">Methodologies</h4>
+                                    <ul class="text-slate-700 text-sm space-y-1">
+                                        <li>• Game Theory</li>
+                                        <li>• Econometrics</li>
+                                        <li>• Machine Learning</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Skills Cards -->
+                    <!-- Education Details -->
                     <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                        <h3 class="text-xl font-bold text-slate-900 mb-6">Core Competencies</h3>
-                        
-                        <!-- Skill Category 1: Analytics (Placeholder for future skills) -->
-                        <div class="mb-6">
-                            <h4 class="text-sm uppercase tracking-wide text-slate-500 font-semibold mb-3">Business Analytics & ML</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Machine Learning</span>
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Data Analysis</span>
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Operations Management</span>
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Statistical Modeling</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-6">Education</h3>
+                        <div class="space-y-8">
+                            
+                            <!-- PhD Management -->
+                            <div class="relative pl-6 border-l-2 border-blue-200">
+                                <h4 class="font-bold text-slate-900">Ph.D. in Management</h4>
+                                <div class="text-blue-600 font-medium text-sm mb-1">UCSD Rady School of Management, 2017</div>
+                                <div class="text-sm text-slate-600 mt-2">
+                                    <span class="font-semibold">Dissertation:</span> Designing Innovation Contests
+                                </div>
+                                <div class="mt-2 inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded border border-yellow-200">
+                                    <i class="fa-solid fa-trophy mr-1"></i> 3rd Prize, 2018 INFORMS TIMES Doctoral Dissertation Award
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Skill Category 2: Engineering/Technical (From PDF) -->
-                        <div class="mb-6">
-                            <h4 class="text-sm uppercase tracking-wide text-slate-500 font-semibold mb-3">Technical & Research</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Design of Experiments</span>
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Process Development</span>
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">CVD / Thin Films</span>
-                                <span class="px-3 py-1 text-sm bg-white border border-slate-200 rounded-full text-slate-700 shadow-sm">Innovation Strategy</span>
+                            <!-- PhD Materials Science -->
+                            <div class="relative pl-6 border-l-2 border-slate-200">
+                                <h4 class="font-bold text-slate-900">Ph.D. in Materials Science & Engineering</h4>
+                                <div class="text-slate-600 font-medium text-sm mb-1">University of Illinois at Urbana-Champaign, 2006</div>
+                                <div class="text-sm text-slate-600 mt-2">
+                                    <span class="font-semibold">Dissertation:</span> Fluctuation Electron Microscopy Investigations of Medium Range Order...
+                                </div>
                             </div>
-                        </div>
 
-                         <!-- Languages -->
-                         <div>
-                            <h4 class="text-sm uppercase tracking-wide text-slate-500 font-semibold mb-3">Languages</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 text-sm bg-slate-200 rounded-full text-slate-700">English</span>
-                                <span class="px-3 py-1 text-sm bg-slate-200 rounded-full text-slate-700">Hindi</span>
-                                <span class="px-3 py-1 text-sm bg-slate-200 rounded-full text-slate-700">Telugu</span>
+                            <!-- B.Tech -->
+                            <div class="relative pl-6 border-l-2 border-slate-200">
+                                <h4 class="font-bold text-slate-900">B.Tech in Materials & Metallurgical Eng.</h4>
+                                <div class="text-slate-600 font-medium text-sm mb-1">Indian Institute of Technology (IIT) Kanpur, 1999</div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -183,7 +199,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
-                    <p class="mt-4 text-slate-600">A timeline of my academic and industrial career.</p>
+                    <p class="mt-4 text-slate-600">Bridging academic research and industrial application.</p>
                 </div>
 
                 <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
@@ -192,144 +208,303 @@
                     <div class="relative pl-8 md:pl-12">
                         <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-blue-600"></div>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Associate Professor in Operations and Business Analytics</h3>
+                            <h3 class="text-xl font-bold text-slate-900">Associate Professor in Operations & Business Analytics</h3>
                             <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug 2024 - Present</span>
                         </div>
-                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton</div>
-                        <div class="text-sm text-slate-500 mb-4">Dayton, Ohio, United States</div>
-                        <p class="text-slate-600">Teaching advanced analytics courses, conducting research in operations management, and mentoring students in business applications of machine learning.</p>
+                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton | School of Business Administration</div>
+                        <p class="text-slate-600 mt-2">
+                            Teaching and research in the Department of MIS, Operations & Supply Chain Management. 
+                            Member of the Editorial Review Board for *Production and Operations Management* (2023-current).
+                        </p>
                     </div>
 
                     <!-- Role 2 -->
                     <div class="relative pl-8 md:pl-12">
                         <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400"></div>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Assistant Professor in Operations and Supply Management</h3>
+                            <h3 class="text-xl font-bold text-slate-900">Assistant Professor</h3>
                             <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug 2017 - Aug 2024</span>
                         </div>
                         <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton</div>
-                        <div class="text-sm text-slate-500 mb-4">Dayton, Ohio Area</div>
-                        <p class="text-slate-600">Developed curriculum for supply chain and operations courses. Published research on technology adoption and operational efficiency.</p>
+                        <p class="text-slate-600 mt-2">
+                            Conducted research on technology adoption, operational efficiency, and supply chain resilience. 
+                            Developed curriculum for operations courses and served as Session Chair for INFORMS Annual Meetings (2017, 2020, 2021).
+                        </p>
                     </div>
 
                     <!-- Role 3 -->
                     <div class="relative pl-8 md:pl-12">
                         <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400"></div>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Technologist / Senior Process Engineer</h3>
-                            <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">May 2006 - June 2011</span>
+                            <h3 class="text-xl font-bold text-slate-900">Technologist & Senior Process Engineer</h3>
+                            <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">May 2006 - July 2011</span>
                         </div>
-                        <div class="text-lg font-medium text-slate-700 mb-1">Novellus Systems (San Jose, CA)</div>
-                        <p class="text-slate-600">Led new product development initiatives. Utilized Design of Experiments (DOE) and statistical process control to optimize thin-film deposition processes for semiconductor manufacturing.</p>
+                        <div class="text-lg font-medium text-slate-700 mb-1">Novellus Systems (San Jose, CA) | Gapfill Business Unit</div>
+                        <div class="mt-2 space-y-2 text-slate-600">
+                            <p>Led technology development for Low-k Flowable Dielectric films and managed onsite technical support teams at major Asian semiconductor manufacturers.</p>
+                            <ul class="list-disc ml-5 text-sm space-y-1">
+                                <li>Generated intellectual property on process schemes for integrated circuit manufacturing.</li>
+                                <li>Planned and executed product demonstration runs to successfully secure business with major customers.</li>
+                                <li>Led troubleshooting efforts to minimize tool downtimes at customer production sites.</li>
+                            </ul>
+                        </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl font-bold text-slate-900">Publications</h2>
+                        <p class="mt-4 text-slate-600">
+                            A comprehensive list of research in Management Science and Materials Engineering.
+                        </p>
+                    </div>
+                    <a href="https://scholar.google.com/citations?user=oZT0mGYAAAAJ&hl=en" target="_blank" class="hidden md:inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition mt-4 md:mt-0">
+                        View Google Scholar <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Category 1: Management -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-bold text-slate-800 border-b border-slate-200 pb-3 mb-6 flex items-center">
+                        <i class="fa-solid fa-chart-bar text-blue-600 mr-3"></i> Management & Operations Research
+                    </h3>
+                    <div class="space-y-4">
+                        
+                        <!-- Paper 1 -->
+                        <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">Designing Knowledge-Driven Innovation Contests</h3>
+                            <div class="text-slate-600 mt-1">Lakshminarayana Nittala and Sanjiv Erat</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">Management Science, 0(0) (2025)</div>
+                        </div>
+
+                        <!-- Paper 2 -->
+                        <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">Screening in Multi-Stage Contests</h3>
+                            <div class="text-slate-600 mt-1">Sina Khorasani, Lakshminarayana Nittala, Vish Krishnan</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">Manufacturing & Service Operations Management, 25(6):2249-2267 (2023)</div>
+                        </div>
+
+                         <!-- Paper 3 -->
+                         <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">How intellectual capital builds supply chain resilience? Exploring mediation and interaction effects from an intellectual capital based view</h3>
+                            <div class="text-slate-600 mt-1">Wantao Yu, Chee Yew Wong, Roberto Chavez, Mark Jacobs, Lakshminarayana Nittala</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">Supply Chain Management: an International Journal, 28(6):1060-1074 (2023)</div>
+                        </div>
+
+                        <!-- Paper 4 -->
+                        <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">Designing Internal Innovation Contests</h3>
+                            <div class="text-slate-600 mt-1">Lakshminarayana Nittala, Sanjiv Erat, Vish Krishnan</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">Production and Operations Management, 31(5):1963-1976 (2022)</div>
+                        </div>
+
+                        <!-- Paper 5 -->
+                         <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">Impact of Psychological Safety on Supply Chain Operational Performance</h3>
+                            <div class="text-slate-600 mt-1">Brandon Lee, Lakshminarayana Nittala, Mark Jacobs, Wantao Yu</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">International Journal of Production Research, 61(3):754-773 (2023)</div>
+                        </div>
+
+                        <!-- Paper 6 -->
+                        <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">How the Thread Was Lost: Misalignment of Expectations Between Students and Professors</h3>
+                            <div class="text-slate-600 mt-1">Nicholas Sullivan, Roopa Raman, Hamed Zolbanin, Lakshmi Nittala, Merete Hvalshagen</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the Association for Information Systems, 48(1):20 (2021)</div>
+                        </div>
+
+                         <!-- Paper 7 -->
+                         <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">When Worlds Collide: Framing Students' Challenges With Stay-at-Home Learning During COVID-19...</h3>
+                            <div class="text-slate-600 mt-1">Merete Hvalshagen, Lakshmi Nittala, Roopa Raman, Nicholas Sullivan, Hamed Zolbanin</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the Association for Information Systems, 48(1):29 (2021)</div>
+                        </div>
+
+                        <!-- Paper 8 -->
+                        <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">Practical Tips for HyFlex Undergraduate Teaching During a Pandemic</h3>
+                            <div class="text-slate-600 mt-1">Roopa Raman, Nicholas Sullivan, Hamed Zolbanin, Lakshmi Nittala, Merete Hvalshagen</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the Association for Information Systems, 48(1):28 (2021)</div>
+                        </div>
+
+                        <!-- Paper 9 -->
+                        <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-900">Anatomy of the Edelman: How to Measure Among the World's Best Analytics Projects</h3>
+                            <div class="text-slate-600 mt-1">Michael Gorman, Lakshminarayana Nittala, Jeffrey Alden</div>
+                            <div class="text-sm text-blue-600 font-medium mt-2 italic">INFORMS Journal on Applied Analytics, 50(6):373-386 (2020)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Materials Science -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 border-b border-slate-200 pb-3 mb-6 flex items-center">
+                        <i class="fa-solid fa-atom text-blue-600 mr-3"></i> Materials Science & Engineering (2001-2010)
+                    </h3>
+                    <div class="space-y-4">
+                         <!-- Paper 1 -->
+                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Hydrogen induced modification of the medium range structural order in amorphous silicon films</h3>
+                            <div class="text-slate-600 mt-1">L N Nittala, S Jayaraman, B A Sperling, JR Abelson</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Applied Physics Letters 84, 241915 (2005)</div>
+                        </div>
+                        
+                         <!-- Paper 2 -->
+                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Hydrogen-Induced Reduction in Medium Range Order of a-Si Thin Films Observed using Fluctuation Electron Microscopy</h3>
+                            <div class="text-slate-600 mt-1">L N Nittala, S Jayaraman, B A Sperling, John R Abelson</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Microscopy and Microanalysis 10 (Suppl. 2), 802 (2004)</div>
+                        </div>
+
+                         <!-- Paper 3 -->
+                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Size analysis of nanoscale order in amorphous materials by variable-resolution fluctuation electron microscopy</h3>
+                            <div class="text-slate-600 mt-1">SN Bogle, L N Nittala, R D Twesten, PM Voyles, JR Abelson</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Ultramicroscopy 110 (2010) 1273-1278</div>
+                        </div>
+
+                         <!-- Paper 4 -->
+                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Nanometer-scale order in amorphous Ge2Sb2Te5 analyzed by fluctuation electron microscopy</h3>
+                            <div class="text-slate-600 mt-1">MH Kwon, B S Lee, S N Bogle, L N Nittala, SG Bishop, JR Abelson</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Applied Physics Letters 90, 021923 (2007)</div>
+                        </div>
+
+                        <!-- Paper 5 -->
+                        <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Fluctuation microscopy evidence for enhanced nanoscale structural order in polymorphous silicon thin films</h3>
+                            <div class="text-slate-600 mt-1">T Nguyen-Tran, V Suendo, and P Roca i Cabarrocas, L N Nittala, S N Bogle, and JR Abelson</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Journal of Applied Physics 100, 094319 (2006)</div>
+                        </div>
+
+                        <!-- Paper 6 -->
+                        <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">A detailed model for defect concentration and dopant activation in GaAs</h3>
+                            <div class="text-slate-600 mt-1">Deepak and N. Lakshminarayana</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Bulletin of Materials Science. 24, 225 (2001)</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Patents Section (New) -->
+        <section id="patents" class="py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900">Patents & Technical Innovations</h2>
+                    <p class="mt-4 text-slate-600">
+                        Intellectual property developed during my tenure in the semiconductor industry at Novellus Systems.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
+                        <i class="fa-solid fa-scroll text-blue-600 mr-3"></i> Patents Granted in Semiconductor Manufacturing
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <div class="p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 transition group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded">US8058179B1</span>
+                                <i class="fa-solid fa-award text-slate-300 group-hover:text-blue-400 transition"></i>
+                            </div>
+                            <div class="font-bold text-slate-900 text-lg">Atomic Layer Removal Process with Higher Etch Amount</div>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 transition group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded">US8685867B1</span>
+                                <i class="fa-solid fa-award text-slate-300 group-hover:text-blue-400 transition"></i>
+                            </div>
+                            <div class="font-bold text-slate-900 text-lg">Pre-metal Dielectric Integration Process</div>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 transition group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded">US8728958B2</span>
+                                <i class="fa-solid fa-award text-slate-300 group-hover:text-blue-400 transition"></i>
+                            </div>
+                            <div class="font-bold text-slate-900 text-lg">Gap-fill Integration</div>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 transition group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded">US9064684B1</span>
+                                <i class="fa-solid fa-award text-slate-300 group-hover:text-blue-400 transition"></i>
+                            </div>
+                            <div class="font-bold text-slate-900 text-lg">Flowable Oxide Deposition using Rapid Delivery of Process Gases</div>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 transition group">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded">US9257302B1</span>
+                                <i class="fa-solid fa-award text-slate-300 group-hover:text-blue-400 transition"></i>
+                            </div>
+                            <div class="font-bold text-slate-900 text-lg">CVD flowable gap fill</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section (Placeholder for ML/Analytics) -->
-        <section id="projects" class="py-20 bg-white">
+        <section id="projects" class="py-20 bg-white border-t border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-end mb-12">
                     <div>
-                        <h2 class="text-3xl font-bold text-slate-900">Projects</h2>
-                        <p class="mt-4 text-slate-600">Key projects in Business Analytics and Machine Learning.</p>
+                        <h2 class="text-3xl font-bold text-slate-900">Analytics Projects</h2>
+                        <p class="mt-4 text-slate-600">Applied Machine Learning and Business Analytics projects.</p>
                     </div>
-                    <!-- Link to detailed page (future) -->
-                    <a href="projects.html" class="hidden sm:inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition">
-                        View All Projects <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </a>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Project Card 1 (Example) -->
+                    <!-- Project placeholders maintained for future content -->
                     <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
                         <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
-                            <i class="fa-solid fa-chart-line text-4xl"></i> <!-- Placeholder Icon -->
+                            <i class="fa-solid fa-robot text-4xl"></i>
                         </div>
                         <div class="p-6">
                             <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Machine Learning</div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Predictive Maintenance Model</h3>
-                            <p class="text-slate-600 mb-4 line-clamp-3">
-                                Developed a Python-based predictive model using Random Forest to anticipate equipment failure in manufacturing settings, reducing downtime by 15%.
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Predictive Maintenance Model</h3>
+                            <p class="text-slate-600 mb-4 text-sm">
+                                Developed a predictive model using Random Forest to anticipate equipment failure, aiming to reduce downtime in manufacturing settings.
                             </p>
-                            <a href="#" class="text-sm font-medium text-slate-900 hover:text-blue-600 transition">Read Case Study &rarr;</a>
                         </div>
                     </div>
-
-                    <!-- Project Card 2 (Example) -->
-                    <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
+                    
+                    <!-- Add more project cards as needed -->
+                     <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
                         <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
-                            <i class="fa-solid fa-network-wired text-4xl"></i>
+                            <i class="fa-solid fa-truck-fast text-4xl"></i>
                         </div>
                         <div class="p-6">
-                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Supply Chain Analytics</div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Inventory Optimization</h3>
-                            <p class="text-slate-600 mb-4 line-clamp-3">
-                                Utilized linear programming and R to optimize inventory levels for a retail client, balancing holding costs against stockout risks.
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Supply Chain</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Inventory Optimization</h3>
+                            <p class="text-slate-600 mb-4 text-sm">
+                                Applied linear programming and R to optimize inventory levels, balancing holding costs against stockout risks.
                             </p>
-                            <a href="#" class="text-sm font-medium text-slate-900 hover:text-blue-600 transition">Read Case Study &rarr;</a>
                         </div>
                     </div>
 
-                    <!-- Project Card 3 (Example) -->
                     <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
                         <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
-                            <i class="fa-solid fa-database text-4xl"></i>
+                            <i class="fa-solid fa-chart-pie text-4xl"></i>
                         </div>
                         <div class="p-6">
-                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Data Visualization</div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Market Trend Dashboard</h3>
-                            <p class="text-slate-600 mb-4 line-clamp-3">
-                                Created an interactive Tableau dashboard to visualize longitudinal market trends, aiding executive decision-making.
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Data Viz</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Market Trend Dashboard</h3>
+                            <p class="text-slate-600 mb-4 text-sm">
+                                Interactive dashboard visualizing longitudinal market trends to aid in executive decision-making processes.
                             </p>
-                            <a href="#" class="text-sm font-medium text-slate-900 hover:text-blue-600 transition">Read Case Study &rarr;</a>
                         </div>
-                    </div>
-
-                </div>
-                
-                <div class="mt-8 text-center sm:hidden">
-                     <a href="projects.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition">
-                        View All Projects <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Coursework Section -->
-        <section id="coursework" class="py-20 bg-slate-900 text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold">Featured Coursework</h2>
-                    <p class="mt-4 text-slate-400">Courses I teach or have completed relevant to Analytics.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Course 1 -->
-                    <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
-                        <div class="text-blue-400 text-sm font-semibold mb-2">DSC 450</div>
-                        <h3 class="text-lg font-bold mb-2">Business Analytics</h3>
-                        <p class="text-slate-400 text-sm">Descriptive, predictive, and prescriptive analytics using modern tools.</p>
-                    </div>
-                    <!-- Course 2 -->
-                    <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
-                        <div class="text-blue-400 text-sm font-semibold mb-2">OPS 300</div>
-                        <h3 class="text-lg font-bold mb-2">Machine Learning Ops</h3>
-                        <p class="text-slate-400 text-sm">Implementation of ML models in production environments.</p>
-                    </div>
-                    <!-- Course 3 -->
-                    <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
-                        <div class="text-blue-400 text-sm font-semibold mb-2">DSC 510</div>
-                        <h3 class="text-lg font-bold mb-2">Data Mining</h3>
-                        <p class="text-slate-400 text-sm">Extracting patterns from large datasets using statistical methods.</p>
-                    </div>
-                     <!-- Course 4 -->
-                     <div class="p-6 rounded-lg bg-slate-800 border border-slate-700 hover:border-blue-500 transition duration-300">
-                        <div class="text-blue-400 text-sm font-semibold mb-2">MBA 620</div>
-                        <h3 class="text-lg font-bold mb-2">Supply Chain Mgmt</h3>
-                        <p class="text-slate-400 text-sm">Strategic optimization of logistics and supply networks.</p>
                     </div>
                 </div>
             </div>
@@ -343,8 +518,8 @@
                     I am always open to discussing new research opportunities, industry consulting, or academic collaborations.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="mailto:nittala@gmail.com" class="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg">
-                        <i class="fa-regular fa-envelope mr-2"></i> Email Me
+                    <a href="mailto:lnittala1@udayton.edu" class="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg">
+                        <i class="fa-regular fa-envelope mr-2"></i> lnittala1@udayton.edu
                     </a>
                     <a href="https://www.linkedin.com/in/lakshminarayana-nittala-273ab71" target="_blank" class="inline-flex items-center justify-center px-8 py-3 bg-blue-700 text-white font-bold rounded-lg border border-blue-500 hover:bg-blue-800 transition">
                         <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
@@ -359,12 +534,11 @@
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
-                <span class="text-lg font-bold text-slate-200">L. Nittala</span>
+                <span class="text-lg font-bold text-slate-200">L. Nittala, Ph.D.</span>
                 <span class="ml-4 text-sm">&copy; 2025 All rights reserved.</span>
             </div>
             <div class="flex space-x-6">
                 <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
                 <a href="mailto:nittala@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope text-xl"></i></a>
             </div>
         </div>
