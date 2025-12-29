@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5SEKVZTPC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5SEKVZTPC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-K5SEKVZTPC');
-</script>
+        gtag('config', 'G-K5SEKVZTPC');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakshminarayana Nittala, Ph.D. | Operations & Business Analytics</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -27,34 +28,42 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
         /* Gradient Background for Hero */
         .hero-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
+
         .citation-box {
             transition: all 0.3s ease;
         }
+
         .citation-box:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 antialiased">
 
     <!-- Navigation -->
     <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center h-16">
-           
-                
+
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About</a>
-                    <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Experience</a>
-                    <a href="#publications" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Publications</a>
-                    <a href="#patents" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Patents</a>
-                    <a href="#teaching" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Teaching</a>
+                    <a href="#experience"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Experience</a>
+                    <a href="#publications"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Publications</a>
+                    <a href="#patents"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Patents</a>
+                    <a href="#teaching"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Teaching</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -69,12 +78,18 @@
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">About</a>
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Experience</a>
-                <a href="#publications" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Publications</a>
-                <a href="#patents" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Patents</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Projects</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-semibold">Contact Me</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">About</a>
+                <a href="#experience"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Experience</a>
+                <a href="#publications"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Publications</a>
+                <a href="#patents"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Patents</a>
+                <a href="#projects"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Projects</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-semibold">Contact Me</a>
             </div>
         </div>
     </nav>
@@ -89,37 +104,45 @@
                         Lakshminarayana Nittala, Ph.D.
                     </h1>
                     <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light">
-                        Associate Professor in <span class="text-white font-medium">Operations & Business Analytics</span><br>
+                        Associate Professor in <span class="text-white font-medium">Operations & Business
+                            Analytics</span><br>
                         School of Business Administration<br>
                         University of Dayton, Ohio
                     </p>
 
                     <div class="flex flex-col sm:flex-row sm:justify-start lg:justify-start gap-6">
-                        <a href="mailto:lnittala1@udayton.edu" class="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg">
-                        <i class="fa-regular fa-envelope mr-2"></i> lnittala1@udayton.edu
+                        <a href="mailto:lnittala1@udayton.edu"
+                            class="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg">
+                            <i class="fa-regular fa-envelope mr-2"></i> lnittala1@udayton.edu
                         </a>
-                            <a href="https://www.linkedin.com/in/lakshminarayana-nittala-273ab71" target="_blank" class="inline-flex items-center justify-center px-8 py-3 bg-blue-700 text-white font-bold rounded-lg border border-blue-500 hover:bg-blue-800 transition">
+                        <a href="https://www.linkedin.com/in/lakshminarayana-nittala-273ab71" target="_blank"
+                            class="inline-flex items-center justify-center px-8 py-3 bg-blue-700 text-white font-bold rounded-lg border border-blue-500 hover:bg-blue-800 transition">
                             <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
                         </a>
                     </div>
 
-                    
-                    
+
+
                 </div>
-                
+
                 <!-- Profile Picture -->
                 <div class="lg:w-1/3 flex justify-center">
                     <div class="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
                         <div class="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <img src="Profile_Lakshmi.jpg" alt="Lakshminarayana Nittala" class="relative w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl">
+                        <img src="Profile_Lakshmi.jpg" alt="Lakshminarayana Nittala"
+                            class="relative w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl">
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Decorative background elements -->
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div
+            class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000">
+        </div>
     </header>
 
     <!-- Main Content Wrapper -->
@@ -129,15 +152,16 @@
         <section id="about" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    
+
                     <!-- Bio & Research Interests -->
                     <div>
                         <h2 class="text-3xl font-bold text-slate-900 mb-6">About Me</h2>
                         <div class="prose prose-slate text-slate-600 text-lg leading-relaxed mb-8">
                             <p class="mb-4">
-                                I am an Associate Professor in the Department of MIS, Operations & Supply Chain Management, and Business Analytics at the University of Dayton.
+                                I am an Associate Professor in the Department of MIS, Operations & Supply Chain
+                                Management, and Business Analytics at the University of Dayton.
                             </p>
-                        
+
                         </div>
 
                         <!-- Research Focus -->
@@ -153,7 +177,8 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="text-lg uppercase tracking-wide text-blue-500 font-bold mb-2">Methodologies</h4>
+                                    <h4 class="text-lg uppercase tracking-wide text-blue-500 font-bold mb-2">
+                                        Methodologies</h4>
                                     <ul class="text-slate-700 text-lg space-y-1">
                                         <li>• Game Theory</li>
                                         <li>• Econometrics</li>
@@ -168,35 +193,46 @@
                     <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                         <h3 class="text-3xl font-bold text-slate-900 mb-6">Education</h3>
                         <div class="space-y-8">
-                            
+
                             <!-- PhD Management -->
                             <div class="relative pl-6 border-l-2 border-blue-200">
                                 <h4 class="text-xl font-bold text-slate-900">Ph.D. in Management</h4>
-                                <a href="https://rady.ucsd.edu/" class="text-blue-600 font-medium text-lg mb-1">Rady School of Management</a>
+                                <a href="https://rady.ucsd.edu/" class="text-blue-600 font-medium text-lg mb-1">Rady
+                                    School of Management</a>
                                 <br>
-                                <a href="https://ucsd.edu/" class="text-blue-600 font-medium text-lg mb-1">University of California San Diego</a>
-                    
+                                <a href="https://ucsd.edu/" class="text-blue-600 font-medium text-lg mb-1">University of
+                                    California San Diego</a>
+
                                 <div class="text-lg text-slate-600 mt-2">
                                     <span class="font-semibold">Dissertation:</span> Designing Innovation Contests
                                 </div>
-                                <div class="mt-2 inline-block bg-yellow-100 text-yellow-800 text-lg px-2 py-1 rounded border border-yellow-200">
-                                    <i class="fa-solid fa-trophy mr-1"></i> 3rd Prize, 2018 INFORMS TIMES Doctoral Dissertation Award
+                                <div
+                                    class="mt-2 inline-block bg-yellow-100 text-yellow-800 text-lg px-2 py-1 rounded border border-yellow-200">
+                                    <i class="fa-solid fa-trophy mr-1"></i> 3rd Prize, 2018 INFORMS TIMES Doctoral
+                                    Dissertation Award
                                 </div>
                             </div>
 
                             <!-- PhD Materials Science -->
                             <div class="relative pl-6 border-l-2 border-slate-200">
-                                <h4 class="text-xl font-bold text-slate-900">Ph.D. in Materials Science & Engineering</h4>
-                                <a href="https://illinois.edu/" class="text-blue-600 font-medium text-lg mb-1">University of Illinois at Urbana-Champaign</a>
+                                <h4 class="text-xl font-bold text-slate-900">Ph.D. in Materials Science & Engineering
+                                </h4>
+                                <a href="https://illinois.edu/"
+                                    class="text-blue-600 font-medium text-lg mb-1">University of Illinois at
+                                    Urbana-Champaign</a>
                                 <div class="text-lg text-slate-600 mt-2">
-                                    <span class="font-semibold">Dissertation:</span> Fluctuation Electron Microscopy Investigations of Medium Range Order in Amorphous Silicon and Hydrogenated Amorphous Silicon Thin Films
+                                    <span class="font-semibold">Dissertation:</span> Fluctuation Electron Microscopy
+                                    Investigations of Medium Range Order in Amorphous Silicon and Hydrogenated Amorphous
+                                    Silicon Thin Films
                                 </div>
                             </div>
 
                             <!-- B.Tech -->
                             <div class="relative pl-6 border-l-2 border-slate-200">
-                                <h4 class="text-xl font-bold text-slate-900">B.Tech in Materials & Metallurgical Engg.</h4>
-                                <a href="https://iitk.ac.in/" class="text-blue-600 font-medium text-lg mb-1">Indian Institute of Technology (IIT) Kanpur</a>
+                                <h4 class="text-xl font-bold text-slate-900">B.Tech in Materials & Metallurgical Engg.
+                                </h4>
+                                <a href="https://iitk.ac.in/" class="text-blue-600 font-medium text-lg mb-1">Indian
+                                    Institute of Technology (IIT) Kanpur</a>
                             </div>
                         </div>
                     </div>
@@ -210,47 +246,65 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
-           
+
                 </div>
 
                 <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
-                    
+
                     <!-- Role 1 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-blue-600"></div>
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Associate Professor in Operations & Business Analytics</h3>
-                            <span class="text-lg font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug 2024 - Present</span>
+                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-blue-600">
                         </div>
-                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton | School of Business Administration</div>
-                 
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Associate Professor in Operations & Business
+                                Analytics</h3>
+                            <span
+                                class="text-lg font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug
+                                2024 - Present</span>
+                        </div>
+                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton | School of Business
+                            Administration</div>
+
                     </div>
 
                     <!-- Role 2 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400"></div>
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Assistant Professor in Operations & Business Analytics</h3>
-                            <span class="text-lg font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug 2017 - Aug 2024</span>
+                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400">
                         </div>
-                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton | School of Business Administration</div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Assistant Professor in Operations & Business
+                                Analytics</h3>
+                            <span
+                                class="text-lg font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Aug
+                                2017 - Aug 2024</span>
+                        </div>
+                        <div class="text-lg font-medium text-slate-700 mb-1">University of Dayton | School of Business
+                            Administration</div>
 
                     </div>
 
                     <!-- Role 3 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400"></div>
+                        <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white bg-slate-400">
+                        </div>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                             <h3 class="text-xl font-bold text-slate-900">Technologist</h3>
-                            <span class="text-lg font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">May 2006 - July 2011</span>
+                            <span
+                                class="text-lg font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">May
+                                2006 - July 2011</span>
                         </div>
-                        <div class="text-lg font-medium text-slate-700 mb-1">Novellus Systems (San Jose, CA) | Gapfill Business Unit</div>
+                        <div class="text-lg font-medium text-slate-700 mb-1">Novellus Systems (San Jose, CA) | Gapfill
+                            Business Unit</div>
                         <div class="mt-2 space-y-2 text-slate-600">
-                            <p>Led technology development for Low-k Flowable Dielectric films and managed onsite technical support at major Asian semiconductor manufacturers.</p>
+                            <p>Led technology development for Low-k Flowable Dielectric films and managed onsite
+                                technical support at major Asian semiconductor manufacturers.</p>
                             <ul class="list-disc ml-5 text-df space-y-1">
-                                <li>Generated intellectual property on process schemes for integrated circuit manufacturing.</li>
-                                <li>Planned and executed product demonstration runs to successfully secure business with major customers.</li>
-                                <li>Led troubleshooting efforts to minimize tool downtimes at customer production sites.</li>
+                                <li>Generated intellectual property on process schemes for integrated circuit
+                                    manufacturing.</li>
+                                <li>Planned and executed product demonstration runs to successfully secure business with
+                                    major customers.</li>
+                                <li>Led troubleshooting efforts to minimize tool downtimes at customer production sites.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -261,164 +315,322 @@
 
 
         <!-- On-going Research Projects Section (New) -->
-        <!--
+
         <section id="ongoing-research" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="mb-12">
                     <h2 class="text-3xl font-bold text-slate-900">On-going Research Projects</h2>
-                    <p class="mt-4 text-slate-600">Current working papers and research in progress.</p>
+
+
                 </div>
                 <div class="space-y-6">
-            -->        
-                    <!-- Template 1 
-                    <div class="citation-box bg-white p-6 rounded-lg border border-slate-200 border-l-4 border-l-yellow-400 relative overflow-hidden group hover:border-l-yellow-500 shadow-sm">
-                        <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Designing Collaborative Contests under Feasibility Uncertainty</h3>
-                            <span class="mt-2 sm:mt-0 text-xs font-semibold text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-0 sm:ml-2 w-fit">Under Review</span>
-                        </div>
-                        <div class="text-slate-600 font-medium mb-3">Sina Khorasani, Lakshminarayana Nittala, Vish Krishnan</div>
-                        <p class="text-slate-500 text-sm">
-                           Many solution-seeking organizations are exploring the notion of open innovation to harness the creativity, diverse experience, and distributed problem-solving capabilities of external solver communities. Within this paradigm, reward-based innovation contests have emerged as a possible mechanism, helping to source ideas in relatively modular and lower-complexity domains such as logo design, product naming, and T-shirt graphics. However, these contest formats often struggle to scale to development-intensive or scientifically complex problems, where solvers face high uncertainty, resource constraints, or feasibility doubts that dampen sustained engagement. To address these limitations, we propose a more collaborative open innovation approach, in which seekers actively support solvers during the innovation process-by providing resources, infrastructure, data, or technical guidance to enhance solver effort. Importantly, we show that such collaborative contests can also address solver uncertainty regarding the problem feasibility and help in maintaining their engagement throughout the more demanding stages of solution development.
-                        </p>
-                    </div>
-                    -->
 
-                    <!-- Template 2 
-                    <div class="citation-box bg-white p-6 rounded-lg border border-slate-200 border-l-4 border-l-yellow-400 relative overflow-hidden group hover:border-l-yellow-500 shadow-sm">
-                        <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">A Machine Learning Framework for Project Performance Prediction, Interpretation, and Inference</h3>
-                            <span class="mt-2 sm:mt-0 text-xs font-semibold text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-0 sm:ml-2 w-fit">In Progress</span>
+                    <!-- Template 1 -->
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5896702" target="_blank">
+                        <div
+                            class="citation-box bg-white p-6 rounded-lg border border-slate-200 border-l-4 border-l-yellow-400 relative overflow-hidden group hover:border-l-yellow-500 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                                    Designing Collaborative Contests under Feasibility Uncertainty</h3>
+                                <span
+                                    class="mt-2 sm:mt-0 text-xs font-semibold text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-0 sm:ml-2 w-fit">Under
+                                    Review at Management Science</span>
+                            </div>
+                            <div class="text-slate-600 font-medium mb-3">Sina Khorasani, Lakshminarayana Nittala, Vish
+                                Krishnan</div>
+                            <p class="text-slate-500 text-sm">
+                                Many solution-seeking organizations are exploring the notion of open innovation to
+                                harness
+                                the creativity, diverse experience, and distributed problem-solving capabilities of
+                                external
+                                solver communities. Within this paradigm, reward-based innovation contests have emerged
+                                as a
+                                possible mechanism, helping to source ideas in relatively modular and lower-complexity
+                                domains such as logo design, product naming, and T-shirt graphics. However, these
+                                contest
+                                formats often struggle to scale to development-intensive or scientifically complex
+                                problems,
+                                where solvers face high uncertainty, resource constraints, or feasibility doubts that
+                                dampen
+                                sustained engagement. To address these limitations, we propose a more collaborative open
+                                innovation approach, in which seekers actively support solvers during the innovation
+                                process-by providing resources, infrastructure, data, or technical guidance to enhance
+                                solver effort. Importantly, we show that such collaborative contests can also address
+                                solver
+                                uncertainty regarding the problem feasibility and help in maintaining their engagement
+                                throughout the more demanding stages of solution development.
+                            </p>
                         </div>
-                        <div class="text-slate-600 font-medium mb-3">Xiaochen Kev Gao, Sina Khorasani, Vish Krishnan, Lakshminarayana Nittala, Siqi Want</div>
-                        <p class="text-slate-500 text-sm">
-                            In the knowledge economy, project performance is central to enterprise functioning, growth, and renewal. However, a significant proportion of real-world, public projects worldwide experience schedule and cost overruns. In this paper, we offer a data-driven machine-learning-based analytic pipeline to predict, interpret, and infer the nature and severity of cost or schedule overrun a project will experience. We find that a carefully curated machine learning approach can help achieve superior prediction metrics. In addition, we build a novel metric to identify and interpret at a granular level the top predictors that contribute to cost or schedule overrun and the severity of each variable. We also investigate the impact of contract pricing types and contract incentives on project performance using a double machine learning model. We confirm the influence of contract pricing on project performance but also find that existing project incentives are lacking in effectiveness in managing cost and schedule overruns. Despite popular belief, cost and performance incentives, when combined with fixed-price contracts, seem to cause additional cost and schedule overruns. However, performance incentives can mitigate cost overrun when offered with cost-plus contracts. Our analysis and results underscore the need for the government and other enterprises to collect and utilize the data for predictive and causal analysis and to develop more nuanced approaches and incentives to tackle cost and schedule overruns in real-world project settings.
-                        </p>
-                    </div>
-                    -->
 
-                    <!-- Template 3
-                    <div class="citation-box bg-white p-6 rounded-lg border border-slate-200 border-l-4 border-l-yellow-400 relative overflow-hidden group hover:border-l-yellow-500 shadow-sm">
-                        <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Working Paper Title</h3>
-                            <span class="mt-2 sm:mt-0 text-xs font-semibold text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-0 sm:ml-2 w-fit">Preparation</span>
+
+                        <!-- Template 2  -->
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5051652" target="_blank">
+                            <div
+                                class="citation-box bg-white p-6 rounded-lg border border-slate-200 border-l-4 border-l-yellow-400 relative overflow-hidden group hover:border-l-yellow-500 shadow-sm">
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                    <h3
+                                        class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                                        A
+                                        Machine Learning Framework for Project Performance Prediction, Interpretation,
+                                        and
+                                        Inference</h3>
+                                    <span
+                                        class="mt-2 sm:mt-0 text-xs font-semibold text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-0 sm:ml-2 w-fit">Under
+                                        Revision
+                                    </span>
+                                </div>
+                                <div class="text-slate-600 font-medium mb-3">Xiaochen Kev Gao, Sina Khorasani, Vish
+                                    Krishnan,
+                                    Lakshminarayana Nittala, Siqi Want</div>
+                                <p class="text-slate-500 text-sm">
+                                    In the knowledge economy, project performance is central to enterprise functioning,
+                                    growth,
+                                    and renewal. However, a significant proportion of real-world, public projects
+                                    worldwide
+                                    experience schedule and cost overruns. In this paper, we offer a data-driven
+                                    machine-learning-based analytic pipeline to predict, interpret, and infer the nature
+                                    and
+                                    severity of cost or schedule overrun a project will experience. We find that a
+                                    carefully
+                                    curated machine learning approach can help achieve superior prediction metrics. In
+                                    addition,
+                                    we build a novel metric to identify and interpret at a granular level the top
+                                    predictors
+                                    that contribute to cost or schedule overrun and the severity of each variable. We
+                                    also
+                                    investigate the impact of contract pricing types and contract incentives on project
+                                    performance using a double machine learning model. We confirm the influence of
+                                    contract
+                                    pricing on project performance but also find that existing project incentives are
+                                    lacking in
+                                    effectiveness in managing cost and schedule overruns. Despite popular belief, cost
+                                    and
+                                    performance incentives, when combined with fixed-price contracts, seem to cause
+                                    additional
+                                    cost and schedule overruns. However, performance incentives can mitigate cost
+                                    overrun
+                                    when
+                                    offered with cost-plus contracts. Our analysis and results underscore the need for
+                                    the
+                                    government and other enterprises to collect and utilize the data for predictive and
+                                    causal
+                                    analysis and to develop more nuanced approaches and incentives to tackle cost and
+                                    schedule
+                                    overruns in real-world project settings.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Template 3 -->
+                        <div
+                            class="citation-box bg-white p-6 rounded-lg border border-slate-200 border-l-4 border-l-yellow-400 relative overflow-hidden group hover:border-l-yellow-500 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                                    The Impact of Public “Word-of-Mouth” on Disaster Response:
+                                    Analyzing Physicians’ Prescription Practice</h3>
+                                <span
+                                    class="mt-2 sm:mt-0 text-xs font-semibold text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-0 sm:ml-2 w-fit">Under
+                                    Revision</span>
+                            </div>
+                            <div class="text-slate-600 font-medium mb-3">Lakshminarayana Nittala, Sezgin Ayabakan,
+                                Subodha
+                                Kumar, Dileep Unnikrishnan, Dileep Raman</div>
+                            <p class="text-slate-500 text-sm">
+                                Social media has emerged as a dominant tool for real-time communication during
+                                disasters.
+                                However, under conditions
+                                of information uncertainty regarding the disaster, social media can propagate
+                                Word-Of-Mouth
+                                (WOM) narratives that can
+                                impede critical decision-making by disaster responders. The underlying Information
+                                Systems
+                                (IS) characteristics of social media
+                                platforms, including content attributes, user interactions, and information flow
+                                mechanisms,
+                                can inadvertently influence the effect
+                                of WOM during disasters. Developing IS design principles and narrative management
+                                strategies
+                                to counteract these bidirectional
+                                communication effects is of paramount interest to researchers and policymakers. Yet,
+                                existing literature has not fully explored
+                                this facet of social media during disasters. To address this critical gap in the
+                                literature
+                                and identify actionable insights for disaster
+                                management, we collaborated with Cloudphysician, India’s largest Tele-Intensive Care
+                                Unit
+                                service provider, and studied how
+                                people’s desperation to obtain remdesivir, an unproven drug against severe COVID-19,
+                                influenced physicians’ prescription practices
+                                during the pandemic. While healthcare providers are expected to follow evidence-based
+                                practices, our empirical analysis reveals a
+                                concerning pattern: prescription rates actually increased with rising social media
+                                discourse, even after scientific evidence definitively
+                                established the drug’s ineffectiveness. This counterintuitive finding highlights how
+                                social
+                                media narratives can override established
+                                medical evidence in clinical decision-making, raising important implications for public
+                                health policy and medical practice. Further
+                                investigation of this finding reveals nuanced effects of social media discourse on
+                                prescribing behavior: Tweets seeking help in
+                                procuring remdesivir for loved ones and those highlighting black-market activities drove
+                                increased remdesivir prescriptions, while
+                                skeptical posts showed no such effect. We also find that social media chatter’s impact
+                                intensified with participation by users with
+                                more followers. We explain these results by applying the Elaboration Likelihood Model
+                                and
+                                the Cognitive Information Processing
+                                framework to identify pathways through which patient pressure influences decision-making
+                                of
+                                physicians. From an IS perspective on
+                                disaster management, insights from our study provide guidelines for related firms (such
+                                as
+                                hospitals and humanitarian organizations)
+                                and policymakers to make disaster response decisions more robust to social media WOM
+                                influence. We also contribute to the IS
+                                literature by demonstrating how social media WOM shapes beliefs, attitudes, and
+                                decision-makers’ information processing.
+                            </p>
                         </div>
-                        <div class="text-slate-600 font-medium mb-3">L. Nittala, Co-Author</div>
-                        <p class="text-slate-500 text-sm">
-                            [Placeholder Abstract] Details about the current state of this manuscript and target journals.
-                        </p>
-                    </div>
-                    -->
-<!--
+
+
                 </div>
             </div>
-        </section> -->
-        
-        
+        </section>
+
+
 
         <!-- Publications Section -->
         <section id="publications" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-12">
-  <h2 class="text-3xl font-bold text-slate-900">
-    Publications
-  </h2>
+                <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        Publications
+                    </h2>
 
-  <a href="https://scholar.google.com/citations?user=oZT0mGYAAAAJ&hl=en"
-     target="_blank"
-     class="mt-4 md:mt-0 inline-flex items-center px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 font-medium transition">
-    View on Google Scholar
-  </a>
-</div>
+                    <a href="https://scholar.google.com/citations?user=oZT0mGYAAAAJ&hl=en" target="_blank"
+                        class="mt-4 md:mt-0 inline-flex items-center px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 font-medium transition">
+                        View on Google Scholar
+                    </a>
+                </div>
 
 
-            
+
 
 
                 <!-- Category 1: Management -->
                 <div class="mb-12">
                     <h3 class="text-2xl font-bold text-slate-800 border-b border-slate-200 pb-3 mb-6 flex items-center">
-                        <i class="fa-solid fa-chart-bar text-blue-600 mr-3"></i> Innovation, Supply Chain Management, and Business Analytics
+                        <i class="fa-solid fa-chart-bar text-blue-600 mr-3"></i> Innovation, Supply Chain Management,
+                        and Business Analytics
                     </h3>
                     <div class="space-y-4">
-                        
+
                         <!-- Paper 1 -->
-                        <a href="https://pubsonline.informs.org/doi/10.1287/mnsc.2022.03369">
+                        <a href="https://pubsonline.informs.org/doi/10.1287/mnsc.2022.03369" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
-                                <h3 class="text-lg font-bold text-slate-900">Designing Knowledge-Driven Innovation Contests</h3>
+                                <h3 class="text-lg font-bold text-slate-900">Designing Knowledge-Driven Innovation
+                                    Contests</h3>
                                 <div class="text-slate-600 mt-1">Lakshminarayana Nittala and Sanjiv Erat</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Management Science, 0(0) (2025)</div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Management Science, 0(0)
+                                    (2025)</div>
                             </div>
                         </a>
 
                         <!-- Paper 2 -->
-                        <a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2021.0378">
+                        <a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2021.0378" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
                                 <h3 class="text-lg font-bold text-slate-900">Screening in Multi-Stage Contests</h3>
-                                <div class="text-slate-600 mt-1">Sina Khorasani, Lakshminarayana Nittala, Vish Krishnan</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Manufacturing & Service Operations Management, 25(6):2249-2267 (2023)</div>
+                                <div class="text-slate-600 mt-1">Sina Khorasani, Lakshminarayana Nittala, Vish Krishnan
+                                </div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Manufacturing & Service
+                                    Operations Management, 25(6):2249-2267 (2023)</div>
                             </div>
                         </a>
 
-                         <!-- Paper 3 -->
-                        <a href="https://www.emerald.com/scm/article-abstract/28/6/1060/350437/How-intellectual-capital-builds-supply-chain?redirectedFrom=fulltext"> 
+                        <!-- Paper 3 -->
+                        <a href="https://www.emerald.com/scm/article-abstract/28/6/1060/350437/How-intellectual-capital-builds-supply-chain?redirectedFrom=fulltext"
+                            target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
-                                <h3 class="text-lg font-bold text-slate-900">How intellectual capital builds supply chain resilience? Exploring mediation and interaction effects from an intellectual capital based view</h3>
-                                <div class="text-slate-600 mt-1">Wantao Yu, Chee Yew Wong, Roberto Chavez, Mark Jacobs, Lakshminarayana Nittala</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Supply Chain Management: an International Journal, 28(6):1060-1074 (2023)</div>
+                                <h3 class="text-lg font-bold text-slate-900">How intellectual capital builds supply
+                                    chain resilience? Exploring mediation and interaction effects from an intellectual
+                                    capital based view</h3>
+                                <div class="text-slate-600 mt-1">Wantao Yu, Chee Yew Wong, Roberto Chavez, Mark Jacobs,
+                                    Lakshminarayana Nittala</div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Supply Chain Management: an
+                                    International Journal, 28(6):1060-1074 (2023)</div>
                             </div>
                         </a>
 
                         <!-- Paper 4 -->
-                        <a href="https://journals.sagepub.com/doi/abs/10.1111/poms.13659">
+                        <a href="https://journals.sagepub.com/doi/abs/10.1111/poms.13659" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
                                 <h3 class="text-lg font-bold text-slate-900">Designing Internal Innovation Contests</h3>
-                                <div class="text-slate-600 mt-1">Lakshminarayana Nittala, Sanjiv Erat, Vish Krishnan</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Production and Operations Management, 31(5):1963-1976 (2022)</div>
+                                <div class="text-slate-600 mt-1">Lakshminarayana Nittala, Sanjiv Erat, Vish Krishnan
+                                </div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Production and Operations
+                                    Management, 31(5):1963-1976 (2022)</div>
                             </div>
                         </a>
 
                         <!-- Paper 5 -->
-                        <a href="https://www.tandfonline.com/doi/abs/10.1080/00207543.2021.2017052"> 
+                        <a href="https://www.tandfonline.com/doi/abs/10.1080/00207543.2021.2017052" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
-                                <h3 class="text-lg font-bold text-slate-900">Impact of Psychological Safety on Supply Chain Operational Performance</h3>
-                                <div class="text-slate-600 mt-1">Brandon Lee, Lakshminarayana Nittala, Mark Jacobs, Wantao Yu</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">International Journal of Production Research, 61(3):754-773 (2023)</div>
+                                <h3 class="text-lg font-bold text-slate-900">Impact of Psychological Safety on Supply
+                                    Chain Operational Performance</h3>
+                                <div class="text-slate-600 mt-1">Brandon Lee, Lakshminarayana Nittala, Mark Jacobs,
+                                    Wantao Yu</div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">International Journal of
+                                    Production Research, 61(3):754-773 (2023)</div>
                             </div>
                         </a>
 
                         <!-- Paper 6 -->
-                        <a href="https://aisel.aisnet.org/cais/vol48/iss1/20/">
+                        <a href="https://aisel.aisnet.org/cais/vol48/iss1/20/" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
-                                <h3 class="text-lg font-bold text-slate-900">How the Thread Was Lost: Misalignment of Expectations Between Students and Professors</h3>
-                                <div class="text-slate-600 mt-1">Nicholas Sullivan, Roopa Raman, Hamed Zolbanin, Lakshmi Nittala, Merete Hvalshagen</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the Association for Information Systems, 48(1):20 (2021)</div>
+                                <h3 class="text-lg font-bold text-slate-900">How the Thread Was Lost: Misalignment of
+                                    Expectations Between Students and Professors</h3>
+                                <div class="text-slate-600 mt-1">Nicholas Sullivan, Roopa Raman, Hamed Zolbanin, Lakshmi
+                                    Nittala, Merete Hvalshagen</div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the
+                                    Association for Information Systems, 48(1):20 (2021)</div>
                             </div>
                         </a>
 
-                         <!-- Paper 7 -->
-                        <a href="https://aisel.aisnet.org/cais/vol48/iss1/29/"> 
+                        <!-- Paper 7 -->
+                        <a href="https://aisel.aisnet.org/cais/vol48/iss1/29/" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
-                                <h3 class="text-lg font-bold text-slate-900">When Worlds Collide: Framing Students' Challenges With Stay-at-Home Learning During COVID-19...</h3>
-                                <div class="text-slate-600 mt-1">Merete Hvalshagen, Lakshmi Nittala, Roopa Raman, Nicholas Sullivan, Hamed Zolbanin</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the Association for Information Systems, 48(1):29 (2021)</div>
+                                <h3 class="text-lg font-bold text-slate-900">When Worlds Collide: Framing Students'
+                                    Challenges With Stay-at-Home Learning During COVID-19...</h3>
+                                <div class="text-slate-600 mt-1">Merete Hvalshagen, Lakshmi Nittala, Roopa Raman,
+                                    Nicholas Sullivan, Hamed Zolbanin</div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the
+                                    Association for Information Systems, 48(1):29 (2021)</div>
                             </div>
                         </a>
 
                         <!-- Paper 8 -->
-                        <a href="https://aisel.aisnet.org/cais/vol48/iss1/28/">
+                        <a href="https://aisel.aisnet.org/cais/vol48/iss1/28/" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
-                                <h3 class="text-lg font-bold text-slate-900">Practical Tips for HyFlex Undergraduate Teaching During a Pandemic</h3>
-                                <div class="text-slate-600 mt-1">Roopa Raman, Nicholas Sullivan, Hamed Zolbanin, Lakshmi Nittala, Merete Hvalshagen</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the Association for Information Systems, 48(1):28 (2021)</div>
+                                <h3 class="text-lg font-bold text-slate-900">Practical Tips for HyFlex Undergraduate
+                                    Teaching During a Pandemic</h3>
+                                <div class="text-slate-600 mt-1">Roopa Raman, Nicholas Sullivan, Hamed Zolbanin, Lakshmi
+                                    Nittala, Merete Hvalshagen</div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">Communications of the
+                                    Association for Information Systems, 48(1):28 (2021)</div>
                             </div>
                         </a>
 
                         <!-- Paper 9 -->
-                        <a href="https://pubsonline.informs.org/doi/full/10.1287/inte.2020.1052">
+                        <a href="https://pubsonline.informs.org/doi/full/10.1287/inte.2020.1052" target="_blank">
                             <div class="citation-box bg-slate-50 p-6 rounded-lg border border-slate-100">
-                                <h3 class="text-lg font-bold text-slate-900">Anatomy of the Edelman: How to Measure Among the World's Best Analytics Projects</h3>
-                                <div class="text-slate-600 mt-1">Michael Gorman, Lakshminarayana Nittala, Jeffrey Alden</div>
-                                <div class="text-sm text-blue-600 font-medium mt-2 italic">INFORMS Journal on Applied Analytics, 50(6):373-386 (2020)</div>
+                                <h3 class="text-lg font-bold text-slate-900">Anatomy of the Edelman: How to Measure
+                                    Among the World's Best Analytics Projects</h3>
+                                <div class="text-slate-600 mt-1">Michael Gorman, Lakshminarayana Nittala, Jeffrey Alden
+                                </div>
+                                <div class="text-sm text-blue-600 font-medium mt-2 italic">INFORMS Journal on Applied
+                                    Analytics, 50(6):373-386 (2020)</div>
                             </div>
                         </a>
                     </div>
@@ -430,46 +642,62 @@
                         <i class="fa-solid fa-atom text-blue-600 mr-3"></i> Materials Science & Engineering (2001-2010)
                     </h3>
                     <div class="space-y-4">
-                         <!-- Paper 1 -->
-                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
-                            <h3 class="text-lg font-bold text-slate-900">Hydrogen induced modification of the medium range structural order in amorphous silicon films</h3>
+                        <!-- Paper 1 -->
+                        <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Hydrogen induced modification of the medium
+                                range structural order in amorphous silicon films</h3>
                             <div class="text-slate-600 mt-1">L N Nittala, S Jayaraman, B A Sperling, JR Abelson</div>
-                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Applied Physics Letters 84, 241915 (2005)</div>
-                        </div>
-                        
-                         <!-- Paper 2 -->
-                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
-                            <h3 class="text-lg font-bold text-slate-900">Hydrogen-Induced Reduction in Medium Range Order of a-Si Thin Films Observed using Fluctuation Electron Microscopy</h3>
-                            <div class="text-slate-600 mt-1">L N Nittala, S Jayaraman, B A Sperling, John R Abelson</div>
-                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Microscopy and Microanalysis 10 (Suppl. 2), 802 (2004)</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Applied Physics Letters 84,
+                                241915 (2005)</div>
                         </div>
 
-                         <!-- Paper 3 -->
-                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
-                            <h3 class="text-lg font-bold text-slate-900">Size analysis of nanoscale order in amorphous materials by variable-resolution fluctuation electron microscopy</h3>
-                            <div class="text-slate-600 mt-1">SN Bogle, L N Nittala, R D Twesten, PM Voyles, JR Abelson</div>
-                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Ultramicroscopy 110 (2010) 1273-1278</div>
+                        <!-- Paper 2 -->
+                        <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Hydrogen-Induced Reduction in Medium Range
+                                Order of a-Si Thin Films Observed using Fluctuation Electron Microscopy</h3>
+                            <div class="text-slate-600 mt-1">L N Nittala, S Jayaraman, B A Sperling, John R Abelson
+                            </div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Microscopy and Microanalysis 10
+                                (Suppl. 2), 802 (2004)</div>
                         </div>
 
-                         <!-- Paper 4 -->
-                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
-                            <h3 class="text-lg font-bold text-slate-900">Nanometer-scale order in amorphous Ge2Sb2Te5 analyzed by fluctuation electron microscopy</h3>
-                            <div class="text-slate-600 mt-1">MH Kwon, B S Lee, S N Bogle, L N Nittala, SG Bishop, JR Abelson</div>
-                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Applied Physics Letters 90, 021923 (2007)</div>
+                        <!-- Paper 3 -->
+                        <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Size analysis of nanoscale order in amorphous
+                                materials by variable-resolution fluctuation electron microscopy</h3>
+                            <div class="text-slate-600 mt-1">SN Bogle, L N Nittala, R D Twesten, PM Voyles, JR Abelson
+                            </div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Ultramicroscopy 110 (2010)
+                                1273-1278</div>
+                        </div>
+
+                        <!-- Paper 4 -->
+                        <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-900">Nanometer-scale order in amorphous Ge2Sb2Te5
+                                analyzed by fluctuation electron microscopy</h3>
+                            <div class="text-slate-600 mt-1">MH Kwon, B S Lee, S N Bogle, L N Nittala, SG Bishop, JR
+                                Abelson</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Applied Physics Letters 90,
+                                021923 (2007)</div>
                         </div>
 
                         <!-- Paper 5 -->
                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
-                            <h3 class="text-lg font-bold text-slate-900">Fluctuation microscopy evidence for enhanced nanoscale structural order in polymorphous silicon thin films</h3>
-                            <div class="text-slate-600 mt-1">T Nguyen-Tran, V Suendo, and P Roca i Cabarrocas, L N Nittala, S N Bogle, and JR Abelson</div>
-                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Journal of Applied Physics 100, 094319 (2006)</div>
+                            <h3 class="text-lg font-bold text-slate-900">Fluctuation microscopy evidence for enhanced
+                                nanoscale structural order in polymorphous silicon thin films</h3>
+                            <div class="text-slate-600 mt-1">T Nguyen-Tran, V Suendo, and P Roca i Cabarrocas, L N
+                                Nittala, S N Bogle, and JR Abelson</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Journal of Applied Physics 100,
+                                094319 (2006)</div>
                         </div>
 
                         <!-- Paper 6 -->
                         <div class="citation-box bg-white p-6 rounded-lg border border-slate-200">
-                            <h3 class="text-lg font-bold text-slate-900">A detailed model for defect concentration and dopant activation in GaAs</h3>
+                            <h3 class="text-lg font-bold text-slate-900">A detailed model for defect concentration and
+                                dopant activation in GaAs</h3>
                             <div class="text-slate-600 mt-1">Deepak and N. Lakshminarayana</div>
-                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Bulletin of Materials Science. 24, 225 (2001)</div>
+                            <div class="text-sm text-slate-500 font-medium mt-2 italic">Bulletin of Materials Science.
+                                24, 225 (2001)</div>
                         </div>
                     </div>
                 </div>
@@ -486,56 +714,77 @@
                         Intellectual property developed during my tenure in the semiconductor industry.
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
                     <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
-                        <i class="fa-solid fa-scroll text-blue-600 mr-3"></i> Patents Granted in Semiconductor Manufacturing
+                        <i class="fa-solid fa-scroll text-blue-600 mr-3"></i> Patents Granted in Semiconductor
+                        Manufacturing
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        
+
                         <!-- Patent 1 -->
-                        <a href="https://patents.google.com/patent/US8058179B1/en" target="_blank" class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
+                        <a href="https://patents.google.com/patent/US8058179B1/en" target="_blank"
+                            class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8058179B1</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
+                                <span
+                                    class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8058179B1</span>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
                             </div>
-                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Atomic Layer Removal Process with Higher Etch Amount</div>
+                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Atomic
+                                Layer Removal Process with Higher Etch Amount</div>
                         </a>
 
                         <!-- Patent 2 -->
-                        <a href="https://patents.google.com/patent/US8685867B1/en" target="_blank" class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
+                        <a href="https://patents.google.com/patent/US8685867B1/en" target="_blank"
+                            class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8685867B1</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
+                                <span
+                                    class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8685867B1</span>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
                             </div>
-                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Pre-metal Dielectric Integration Process</div>
+                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Pre-metal
+                                Dielectric Integration Process</div>
                         </a>
 
                         <!-- Patent 3 -->
-                        <a href="https://patents.google.com/patent/US8728958B2/en" target="_blank" class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
+                        <a href="https://patents.google.com/patent/US8728958B2/en" target="_blank"
+                            class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8728958B2</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
+                                <span
+                                    class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8728958B2</span>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
                             </div>
-                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Gap-fill Integration</div>
+                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Gap-fill
+                                Integration</div>
                         </a>
 
                         <!-- Patent 4 -->
-                        <a href="https://patents.google.com/patent/US8278224B1/en" target="_blank" class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
+                        <a href="https://patents.google.com/patent/US8278224B1/en" target="_blank"
+                            class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8278224B1</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
+                                <span
+                                    class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US8278224B1</span>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
                             </div>
-                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Flowable Oxide Deposition using Rapid Delivery of Process Gases</div>
+                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">Flowable
+                                Oxide Deposition using Rapid Delivery of Process Gases</div>
                         </a>
 
                         <!-- Patent 5 -->
-                        <a href="https://patents.google.com/patent/US9257302B1/en" target="_blank" class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
+                        <a href="https://patents.google.com/patent/US9257302B1/en" target="_blank"
+                            class="block p-5 bg-slate-50 rounded-lg border border-slate-100 hover:border-blue-300 hover:shadow-md transition group">
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US9257302B1</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
+                                <span
+                                    class="text-xs font-bold text-blue-700 uppercase bg-blue-100 px-2 py-1 rounded group-hover:bg-blue-600 group-hover:text-white transition">US9257302B1</span>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-blue-500 transition"></i>
                             </div>
-                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">CVD flowable gap fill</div>
+                            <div class="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition">CVD
+                                flowable gap fill</div>
                         </a>
 
                     </div>
@@ -549,48 +798,59 @@
                 <div class="flex justify-between items-end mb-12">
                     <div>
                         <h2 class="text-3xl font-bold text-slate-900">Teaching</h2>
-                        
+
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project placeholders maintained for future content -->
-                    <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
-                        <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
+                    <div
+                        class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
+                        <div
+                            class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
                             <i class="fa-solid fa-robot text-4xl"></i>
                         </div>
                         <div class="p-6">
-                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Business Analytics</div>
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Business
+                                Analytics</div>
                             <h3 class="text-xl font-bold text-slate-900 mb-2">Introduction to Machine Learning</h3>
                             <p class="text-slate-600 mb-4 text-sm">
-                                Theoretical concepts from Machine Learning along with hands-on practice in implementing various algorithms using the Scikit-learn library. 
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Add more project cards as needed -->
-                     <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
-                        <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
-                            <i class="fa-solid fa-truck-fast text-4xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Operations Management</div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Survey of Operations Management</h3>
-                            <p class="text-slate-600 mb-4 text-sm">
-                                Undergraduate core class that introduces the various topics within operations management.
+                                Theoretical concepts from Machine Learning along with hands-on practice in implementing
+                                various algorithms using the Scikit-learn library.
                             </p>
                         </div>
                     </div>
 
-                    <div class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
-                        <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
+                    <!-- Add more project cards as needed -->
+                    <div
+                        class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
+                        <div
+                            class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
+                            <i class="fa-solid fa-truck-fast text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Operations
+                                Management</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Survey of Operations Management</h3>
+                            <p class="text-slate-600 mb-4 text-sm">
+                                Undergraduate core class that introduces the various topics within operations
+                                management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-blue-400 hover:shadow-lg transition duration-300">
+                        <div
+                            class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition">
                             <i class="fa-solid fa-chart-pie text-4xl"></i>
                         </div>
                         <div class="p-6">
-                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">operations management</div>
+                            <div class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">operations
+                                management</div>
                             <h3 class="text-xl font-bold text-slate-900 mb-2">Operational Effectiveness</h3>
                             <p class="text-slate-600 mb-4 text-sm">
-                                MBA core class on operations management using the case based method.
+                                MBA core class on operations management.
                             </p>
                         </div>
                     </div>
@@ -603,13 +863,16 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-bold text-white mb-6">Interested in collaboration?</h2>
                 <p class="text-blue-100 text-xl mb-10">
-                    I am always open to discussing new research opportunities, industry consulting, or academic collaborations.
+                    I am always open to discussing new research opportunities, industry consulting, or academic
+                    collaborations.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="mailto:lnittala1@udayton.edu" class="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg">
+                    <a href="mailto:lnittala1@udayton.edu"
+                        class="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-100 transition shadow-lg">
                         <i class="fa-regular fa-envelope mr-2"></i> lnittala1@udayton.edu
                     </a>
-                    <a href="https://www.linkedin.com/in/lakshminarayana-nittala-273ab71" target="_blank" class="inline-flex items-center justify-center px-8 py-3 bg-blue-700 text-white font-bold rounded-lg border border-blue-500 hover:bg-blue-800 transition">
+                    <a href="https://www.linkedin.com/in/lakshminarayana-nittala-273ab71" target="_blank"
+                        class="inline-flex items-center justify-center px-8 py-3 bg-blue-700 text-white font-bold rounded-lg border border-blue-500 hover:bg-blue-800 transition">
                         <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
                     </a>
                 </div>
@@ -625,7 +888,7 @@
                 <span class="text-lg font-bold text-slate-200">L. Nittala, Ph.D.</span>
                 <span class="ml-4 text-sm">&copy; 2025 All rights reserved.</span>
             </div>
-       
+
         </div>
     </footer>
 
@@ -650,4 +913,5 @@
         });
     </script>
 </body>
+
 </html>
