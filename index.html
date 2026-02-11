@@ -892,7 +892,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center">
             <div class="mb-4 md:mb-0">
                 <span class="text-lg font-bold text-slate-200">L. Nittala, Ph.D.</span>
-                <span class="ml-4 text-sm">&copy; 2025 All rights reserved.</span>
+                <span class="ml-4 text-sm">&copy; <span id="copyright-year">2025</span> All rights reserved.</span>
             </div>
 
         </div>
@@ -918,6 +918,9 @@
             }
         });
     </script>
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 </body>
 
 </html>
