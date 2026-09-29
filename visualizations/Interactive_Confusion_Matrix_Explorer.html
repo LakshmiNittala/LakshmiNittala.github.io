@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Confusion Matrix Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .matrix-cell {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .matrix-cell:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-tp {
+            background-color: #dbeafe !important;
+        }
+
+        .highlight-tn {
+            background-color: #dcfce7 !important;
+        }
+
+        .highlight-fp {
+            background-color: #fee2e2 !important;
+        }
+
+        .highlight-fn {
+            background-color: #ffedd5 !important;
+        }
+
+        .explanation-card {
+            border-left-width: 4px;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-slate-800">BAN482: Interactive Confusion Matrix Explorer</h1>
+            <p class="mt-2 text-lg text-slate-600">An intuitive guide to understanding classification model performance.
+            </p>
+            <p class="mt-2 text-lg text-red-600">Prof. Lakshmi Nittala, University of Dayton</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left Column: Dataset and Explanations -->
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold text-slate-700 mb-4">Sample Dataset & Predictions</h2>
+                    <p class="text-slate-600 mb-4">
+                        Our model was trained to predict if an animal is a "Dog" or a "Cat". Here are 10 predictions it
+                        made.
+                        In this model: <span class="font-semibold text-blue-600">"Dog" is the POSITIVE class</span> and
+                        <span class="font-semibold text-green-600">"Cat" is the NEGATIVE class</span>.
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse" id="dataTable">
+                            <thead class="bg-slate-100">
+                                <tr>
+                                    <th class="p-3 text-sm font-semibold text-slate-600 rounded-tl-lg">ID</th>
+                                    <th class="p-3 text-sm font-semibold text-slate-600">Actual Animal</th>
+                                    <th class="p-3 text-sm font-semibold text-slate-600">Model's Prediction</th>
+                                    <th class="p-3 text-sm font-semibold text-slate-600 rounded-tr-lg">Result</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTableBody">
+                                <!-- Data rows will be inserted by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="explanation-section" class="space-y-4">
+                    <!-- Explanation cards will be inserted by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Right Column: Confusion Matrix and Metrics -->
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold text-slate-700 mb-2">The Confusion Matrix</h2>
+                    <p class="text-slate-600 mb-6">This matrix visualizes the performance of our prediction model. Hover
+                        over a cell to see the corresponding data points highlighted in the table.</p>
+
+                    <div class="flex justify-center items-center">
+                        <p class="text-center -rotate-90 -translate-x-12 text-sm font-semibold text-slate-500 w-16">
+                            ACTUAL</p>
+                        <div class="grid grid-cols-1">
+                            <div class="text-center mb-2 text-sm font-semibold text-slate-500">PREDICTED</div>
+                            <div class="grid grid-cols-[auto,1fr,1fr] gap-2 items-center">
+                                <div></div>
+                                <div class="text-center font-bold text-blue-600">Dog</div>
+                                <div class="text-center font-bold text-green-600">Cat</div>
+
+                                <div class="text-right font-bold text-blue-600">Dog</div>
+                                <div id="tp-cell" data-type="tp"
+                                    class="matrix-cell bg-blue-100 border-2 border-blue-500 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-blue-800" id="tp-value">0</div>
+                                    <div class="text-sm font-semibold text-blue-600">True Positive</div>
+                                </div>
+                                <div id="fn-cell" data-type="fn"
+                                    class="matrix-cell bg-orange-100 border-2 border-orange-500 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-orange-800" id="fn-value">0</div>
+                                    <div class="text-sm font-semibold text-orange-600">False Negative</div>
+                                </div>
+
+                                <div class="text-right font-bold text-green-600">Cat</div>
+                                <div id="fp-cell" data-type="fp"
+                                    class="matrix-cell bg-red-100 border-2 border-red-500 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-red-800" id="fp-value">0</div>
+                                    <div class="text-sm font-semibold text-red-600">False Positive</div>
+                                </div>
+                                <div id="tn-cell" data-type="tn"
+                                    class="matrix-cell bg-green-100 border-2 border-green-500 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-green-800" id="tn-value">0</div>
+                                    <div class="text-sm font-semibold text-green-600">True Negative</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold text-slate-700 mb-4">Calculated Metrics</h2>
+                    <div id="metrics-section" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Metrics will be inserted by JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATA ---
+            const dataset = [
+                { id: 1, actual: 'Dog', predicted: 'Dog' },
+                { id: 2, actual: 'Cat', predicted: 'Cat' },
+                { id: 3, actual: 'Dog', predicted: 'Dog' },
+                { id: 4, actual: 'Cat', predicted: 'Dog' },
+                { id: 5, actual: 'Dog', predicted: 'Cat' },
+                { id: 6, actual: 'Cat', predicted: 'Cat' },
+                { id: 7, actual: 'Dog', predicted: 'Dog' },
+                { id: 8, actual: 'Cat', predicted: 'Cat' },
+                { id: 9, actual: 'Dog', predicted: 'Dog' },
+                { id: 10, actual: 'Cat', predicted: 'Dog' },
+            ];
+
+            const POSITIVE_CLASS = 'Dog';
+            const NEGATIVE_CLASS = 'Cat';
+
+            // --- CALCULATIONS ---
+            let tp = 0, tn = 0, fp = 0, fn = 0;
+
+            dataset.forEach(item => {
+                const isPositiveActual = item.actual === POSITIVE_CLASS;
+                const isPositivePredicted = item.predicted === POSITIVE_CLASS;
+
+                if (isPositiveActual && isPositivePredicted) {
+                    item.result = 'TP';
+                    tp++;
+                } else if (!isPositiveActual && !isPositivePredicted) {
+                    item.result = 'TN';
+                    tn++;
+                } else if (!isPositiveActual && isPositivePredicted) {
+                    item.result = 'FP';
+                    fp++;
+                } else if (isPositiveActual && !isPositivePredicted) {
+                    item.result = 'FN';
+                    fn++;
+                }
+            });
+
+            const total = dataset.length;
+            const accuracy = total > 0 ? (tp + tn) / total : 0;
+            const precision = (tp + fp) > 0 ? tp / (tp + fp) : 0;
+            const recall = (tp + fn) > 0 ? tp / (tp + fn) : 0; // Also known as Sensitivity
+            const specificity = (tn + fp) > 0 ? tn / (tn + fp) : 0;
+            const f1Score = (precision + recall) > 0 ? 2 * (precision * recall) / (precision + recall) : 0;
+
+            // --- DOM MANIPULATION ---
+            const dataTableBody = document.getElementById('dataTableBody');
+            const explanationSection = document.getElementById('explanation-section');
+            const metricsSection = document.getElementById('metrics-section');
+
+            // Populate data table
+            dataset.forEach(item => {
+                const row = document.createElement('tr');
+                row.className = `border-b border-slate-200 data-row result-${item.result.toLowerCase()}`;
+                row.innerHTML = `
+                    <td class="p-3">${item.id}</td>
+                    <td class="p-3">${item.actual}</td>
+                    <td class="p-3">${item.predicted}</td>
+                    <td class="p-3 font-medium text-slate-700">${item.result}</td>
+                `;
+                dataTableBody.appendChild(row);
+            });
+
+            // Populate confusion matrix values
+            document.getElementById('tp-value').textContent = tp;
+            document.getElementById('tn-value').textContent = tn;
+            document.getElementById('fp-value').textContent = fp;
+            document.getElementById('fn-value').textContent = fn;
+
+            // Define content for explanations and metrics
+            const explanations = [
+                {
+                    type: 'tp',
+                    title: 'True Positive (TP)',
+                    description: 'The model correctly predicted the positive class. <br><b>Actual: Dog, Predicted: Dog</b>',
+                    borderColor: 'border-blue-500',
+                    bgColor: 'bg-blue-50',
+                },
+                {
+                    type: 'fn',
+                    title: 'False Negative (FN)',
+                    description: 'The model incorrectly predicted the negative class. Also called a "Type II Error".<br><b>Actual: Dog, Predicted: Cat</b>',
+                    borderColor: 'border-orange-500',
+                    bgColor: 'bg-orange-50',
+                },
+                {
+                    type: 'fp',
+                    title: 'False Positive (FP)',
+                    description: 'The model incorrectly predicted the positive class. Also called a "Type I Error".<br><b>Actual: Cat, Predicted: Dog</b>',
+                    borderColor: 'border-red-500',
+                    bgColor: 'bg-red-50',
+                },
+                {
+                    type: 'tn',
+                    title: 'True Negative (TN)',
+                    description: 'The model correctly predicted the negative class. <br><b>Actual: Cat, Predicted: Cat</b>',
+                    borderColor: 'border-green-500',
+                    bgColor: 'bg-green-50',
+                },
+            ];
+
+            const metrics = [
+                {
+                    title: 'Accuracy',
+                    value: `${(accuracy * 100).toFixed(1)}%`,
+                    formula: '(TP + TN) / Total',
+                    calculation: `(${tp} + ${tn}) / ${total}`,
+                    description: 'Overall, how often is the classifier correct?'
+                },
+                {
+                    title: 'Precision',
+                    value: `${(precision * 100).toFixed(1)}%`,
+                    formula: 'TP / (TP + FP)',
+                    calculation: `${tp} / (${tp} + ${fp})`,
+                    description: 'When it predicts positive, how often is it correct?'
+                },
+                {
+                    title: 'Recall (Sensitivity)',
+                    value: `${(recall * 100).toFixed(1)}%`,
+                    formula: 'TP / (TP + FN)',
+                    calculation: `${tp} / (${tp} + ${fn})`,
+                    description: 'Of all the actual positives, how many did we identify?'
+                },
+                {
+                    title: 'Specificity',
+                    value: `${(specificity * 100).toFixed(1)}%`,
+                    formula: 'TN / (TN + FP)',
+                    calculation: `${tn} / (${tn} + ${fp})`,
+                    description: 'Of all the actual negatives, how many did we identify?'
+                },
+                {
+                    title: 'F1-Score',
+                    value: `${f1Score.toFixed(2)}`,
+                    formula: '2 * (Prec * Rec) / (Prec + Rec)',
+                    calculation: `2*(${precision.toFixed(2)}*${recall.toFixed(2)})/(${precision.toFixed(2)}+${recall.toFixed(2)})`,
+                    description: 'The harmonic mean of Precision and Recall. A good balance.'
+                },
+            ];
+
+            // Populate explanations
+            explanations.forEach(exp => {
+                const card = document.createElement('div');
+                card.id = `exp-${exp.type}`;
+                card.className = `explanation-card ${exp.bgColor} ${exp.borderColor} p-4 rounded-md`;
+                card.innerHTML = `
+                    <h3 class="font-bold text-lg text-slate-800">${exp.title}</h3>
+                    <p class="text-slate-600">${exp.description}</p>
+                `;
+                explanationSection.appendChild(card);
+            });
+
+            // Populate metrics
+            metrics.forEach(metric => {
+                const card = document.createElement('div');
+                card.className = 'bg-slate-50 p-4 rounded-lg border border-slate-200';
+                card.innerHTML = `
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="font-semibold text-slate-700">${metric.title}</h3>
+                        <span class="text-2xl font-bold text-slate-800">${metric.value}</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-1">${metric.description}</p>
+                    <div class="mt-2 text-xs font-mono bg-slate-200 text-slate-700 p-2 rounded">
+                        <div>${metric.formula}</div>
+                        <div>= ${metric.calculation}</div>
+                    </div>
+                `;
+                metricsSection.appendChild(card);
+            });
+
+
+            // --- EVENT LISTENERS ---
+            const matrixCells = document.querySelectorAll('.matrix-cell');
+            const dataRows = document.querySelectorAll('.data-row');
+
+            matrixCells.forEach(cell => {
+                const type = cell.dataset.type;
+                cell.addEventListener('mouseenter', () => highlightRows(type));
+                cell.addEventListener('mouseleave', clearHighlights);
+            });
+
+            function highlightRows(type) {
+                clearHighlights(); // Clear previous before applying new
+                const explanationCard = document.getElementById(`exp-${type}`);
+                if (explanationCard) {
+                    explanationCard.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                    explanationCard.style.transform = 'scale(1.02)';
+                }
+
+                dataRows.forEach(row => {
+                    if (row.classList.contains(`result-${type}`)) {
+                        row.classList.add(`highlight-${type}`);
+                    }
+                });
+            }
+
+            function clearHighlights() {
+                document.querySelectorAll('.explanation-card').forEach(c => {
+                    c.style.boxShadow = '';
+                    c.style.transform = '';
+                });
+
+                dataRows.forEach(row => {
+                    row.classList.remove('highlight-tp', 'highlight-tn', 'highlight-fp', 'highlight-fn');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

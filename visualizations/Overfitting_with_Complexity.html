@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bias-Variance Tradeoff Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.lactame.com/lib/ml/6.0.0/ml.min.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f9fc;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .chart-container {
+            width: 90%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        .controls {
+            margin-top: 25px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        input[type="range"] {
+            width: 300px;
+        }
+
+        #degreeValue {
+            font-weight: bold;
+            color: #007bff;
+            min-width: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>BAN482: Interactive Visualization of Over-fitting with Model Complexity</h3>
+    <h4>Prof. Lakshmi Nittala, University of Dayton</h4>
+    <div class="chart-container">
+        <canvas id="biasVarianceChart"></canvas>
+    </div>
+
+    <div class="controls">
+        <label for="degreeSlider">Model Complexity (Polynomial Degree):</label>
+        <input type="range" id="degreeSlider" min="1" max="20" value="1">
+        <span id="degreeValue">1</span>
+    </div>
+
+    <script>
+        // --- 1. DATA GENERATION ---
+        function generateData(numPoints = 30) {
+            const X = [];
+            const y = [];
+
+            // Generate points and sort by X for clean line plotting
+            const points = [];
+            for (let i = 0; i < numPoints; i++) {
+                const xVal = Math.random();
+                const yTrue = Math.sin(2 * Math.PI * xVal);
+                // Add some random noise
+                const noise = (Math.random() - 0.5) * 0.5;
+                points.push({ x: xVal, y: yTrue + noise });
+            }
+
+            // Sort points by x-value
+            points.sort((a, b) => a.x - b.x);
+
+            // Separate into X and y arrays
+            points.forEach(p => {
+                X.push(p.x);
+                y.push(p.y);
+            });
+
+            return { X, y };
+        }
+
+        // --- 2. CHART SETUP ---
+        const originalData = generateData();
+        const ctx = document.getElementById('biasVarianceChart').getContext('2d');
+
+        // Format data for Chart.js scatter plot
+        const scatterData = originalData.X.map((x, i) => ({ x: x, y: originalData.y[i] }));
+
+        const myChart = new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [
+                    {
+                        label: 'Noisy Data Points',
+                        data: scatterData,
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        pointRadius: 5,
+                    },
+                    {
+                        label: 'Fitted Model',
+                        data: [], // This will be populated by the update function
+                        type: 'line', // Override the chart type for this dataset
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 3,
+                        fill: false,
+                        tension: 0.1,
+                        pointRadius: 0, // Don't show points on the line
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: { display: true, text: 'X' }
+                    },
+                    y: {
+                        title: { display: true, text: 'Y' }
+                    }
+                }
+            }
+        });
+
+        // --- 3. MODEL FITTING AND PLOT UPDATE LOGIC ---
+        const degreeSlider = document.getElementById('degreeSlider');
+        const degreeValueSpan = document.getElementById('degreeValue');
+
+        function updatePlot() {
+            const degree = parseInt(degreeSlider.value);
+            degreeValueSpan.textContent = degree;
+
+            // Fit the polynomial regression model using ml.js
+            const regression = new ML.PolynomialRegression(originalData.X, originalData.y, degree);
+
+            // Generate points for the smooth model line
+            const modelLineData = [];
+            for (let i = 0; i <= 100; i++) {
+                const xVal = i / 100;
+                modelLineData.push({ x: xVal, y: regression.predict(xVal) });
+            }
+
+            // Update the chart's model line data and redraw
+            myChart.data.datasets[1].data = modelLineData;
+            myChart.update();
+        }
+
+        // --- 4. EVENT LISTENERS ---
+        // Update the plot whenever the slider is moved
+        degreeSlider.addEventListener('input', updatePlot);
+
+        // Initial plot on page load
+        updatePlot();
+    </script>
+
+</body>
+
+</html>
